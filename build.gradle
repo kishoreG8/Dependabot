@@ -135,7 +135,7 @@ allprojects {
 
     // Forced library version to mitigate vulnerability of 3rd party libs.
     configurations.configureEach {
-        resolutionStrategy.force "com.google.android.gms:play-services-basement:18.3.0"
+        resolutionStrategy.force "com.google.android.gms:play-services-basement:18.6.0"
         resolutionStrategy.force "com.squareup.okio:okio-jvm:3.7.0"
         resolutionStrategy.force "com.google.guava:guava:33.0.0-android"
         resolutionStrategy.force "com.google.guava:guava:33.0.0-jre"
