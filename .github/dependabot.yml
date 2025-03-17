@@ -6,7 +6,7 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
-      time: "17:00"
+      time: "17:37"
     commit-message:
       prefix: "dependabot"
     groups:
