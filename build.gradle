@@ -140,8 +140,8 @@ allprojects {
         resolutionStrategy.force "com.google.guava:guava:33.0.0-android"
         resolutionStrategy.force "com.google.guava:guava:33.0.0-jre"
         resolutionStrategy.force "commons-io:commons-io:2.15.1"
-        resolutionStrategy.force "com.google.code.gson:gson:gson-parent-2.10.1"
-        resolutionStrategy.force "com.google.code.gson:gson:2.10.1"
+        resolutionStrategy.force "com.google.code.gson:gson:2.12.1"
+        resolutionStrategy.force "com.google.code.gson:gson:2.12.1"
     }
 
 }
