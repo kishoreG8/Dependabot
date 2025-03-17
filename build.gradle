@@ -91,7 +91,7 @@ buildscript {
         classpath 'com.trimble:infrastructure-gradle-plugins-plugin:6.2.0'
         classpath 'com.google.firebase:perf-plugin:1.4.2'  // Performance Monitoring plugin
         classpath 'com.google.firebase:firebase-crashlytics-gradle:3.0.3'
-        classpath 'com.github.triplet.gradle:play-publisher:3.8.6'
+        classpath 'com.github.triplet.gradle:play-publisher:3.12.1'
     }
 }
 
