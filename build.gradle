@@ -5,7 +5,7 @@ buildscript {
         compile_sdk_version = 35
         min_sdk_version = 26
 
-        kotlin_version = '1.9.23'
+        kotlin_version = '2.1.10'
         maine_toolbar_version = '2.3.8'
         launchercommunication_lib_version = '7.1.0'
         coroutines_version = '1.7.3'
@@ -85,13 +85,13 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.2.2'
+        classpath 'com.android.tools.build:gradle:8.9.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.google.gms:google-services:4.4.2'
         classpath 'com.trimble:infrastructure-gradle-plugins-plugin:6.2.0'
         classpath 'com.google.firebase:perf-plugin:1.4.2'  // Performance Monitoring plugin
         classpath 'com.google.firebase:firebase-crashlytics-gradle:3.0.3'
-        classpath 'com.github.triplet.gradle:play-publisher:3.8.6'
+        classpath 'com.github.triplet.gradle:play-publisher:3.12.1'
     }
 }
 
@@ -135,13 +135,13 @@ allprojects {
 
     // Forced library version to mitigate vulnerability of 3rd party libs.
     configurations.configureEach {
-        resolutionStrategy.force "com.google.android.gms:play-services-basement:18.3.0"
-        resolutionStrategy.force "com.squareup.okio:okio-jvm:3.7.0"
-        resolutionStrategy.force "com.google.guava:guava:33.0.0-android"
-        resolutionStrategy.force "com.google.guava:guava:33.0.0-jre"
-        resolutionStrategy.force "commons-io:commons-io:2.15.1"
-        resolutionStrategy.force "com.google.code.gson:gson:gson-parent-2.10.1"
-        resolutionStrategy.force "com.google.code.gson:gson:2.10.1"
+        resolutionStrategy.force "com.google.android.gms:play-services-basement:18.5.0"
+        resolutionStrategy.force "com.squareup.okio:okio-jvm:3.10.2"
+        resolutionStrategy.force "com.google.guava:guava:33.4.0-android"
+        resolutionStrategy.force "com.google.guava:guava:33.4.0-android"
+        resolutionStrategy.force "commons-io:commons-io:2.18.0"
+        resolutionStrategy.force "com.google.code.gson:gson:2.12.1"
+        resolutionStrategy.force "com.google.code.gson:gson:2.12.1"
     }
 
 }
