@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.textfield.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/text_input_layout"
+    style="@style/RequiredFieldOutlineBoxTheme"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/defaultOutlineBoxBorderColor"
+    android:textColorHint="@color/textColor"
+    app:boxBackgroundMode="outline"
+    app:boxStrokeErrorColor="@color/outlineBoxErrorColor"
+    app:counterEnabled="true"
+    app:counterOverflowTextColor="@color/outlineBoxErrorColor"
+    app:counterTextColor="@color/white"
+    app:errorTextColor="@color/textColor"
+    app:boxCornerRadiusBottomEnd="3dp"
+    app:boxCornerRadiusBottomStart="3dp"
+    app:boxCornerRadiusTopEnd="3dp"
+    app:boxCornerRadiusTopStart="3dp">
+
+</com.google.android.material.textfield.TextInputLayout>

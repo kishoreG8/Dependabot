@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="padding_1dp">1dp</dimen>
+    <dimen name="padding_5dp">5dp</dimen>
+    <dimen name="padding_8dp">8dp</dimen>
+    <dimen name="padding_10dp">10dp</dimen>
+    <dimen name="small_shape_dp">2dp</dimen>
+    <dimen name="medium_shape_dp">4dp</dimen>
+    <dimen name="large_shape_dp">0dp</dimen>
+    <dimen name="font_size_26sp">26sp</dimen>
+    <dimen name="font_size_22sp">22sp</dimen>
+    <dimen name="font_size_19sp">19sp</dimen>
+    <dimen name="font_size_18sp">18sp</dimen>
+    <dimen name="font_size_16sp">16sp</dimen>
+    <dimen name="font_size_14sp">14sp</dimen>
+    <dimen name="padding_size_15">15dp</dimen>
+    <dimen name="padding_size_20">20dp</dimen>
+    <dimen name="margin_size_15">15dp</dimen>
+    <dimen name="corner_radius_3dp">3dp</dimen>
+    <dimen name="border_stroke_1dp">1dp</dimen>
+
+    <dimen name="signature_image_height">250dp</dimen>
+    <dimen name="signature_canvas_view_height">300dp</dimen>
+    <dimen name="signature_title_size">30sp</dimen>
+    <dimen name="signatureButtonTextSize">12sp</dimen>
+    <dimen name="dp_300">300dp</dimen>
+    <dimen name="dp_200">200dp</dimen>
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_80">80dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+
+
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_32">32dp</dimen>
+    <dimen name="dp_60">60dp</dimen>
+</resources>

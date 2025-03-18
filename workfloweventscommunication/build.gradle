@@ -1,0 +1,146 @@
+ext.artifactBaseName = 'workfloweventscommunication'
+
+apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'maven-publish'
+apply plugin: 'ttm-mep-gitflow-version-plugin'
+apply plugin: 'ttm-mep-artifactory-plugin'
+apply plugin: 'signing'
+
+android {
+    namespace 'com.trimble.ttm.workfloweventscommunication'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 25
+        targetSdk 33
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+}
+
+dependencies {
+    implementation "androidx.core:core-ktx:1.9.0"
+
+    //Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
+
+    implementation "androidx.lifecycle:lifecycle-service:2.6.2"
+    implementation "com.google.code.gson:gson:$gson_version"
+
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$junit_jupiter_version"
+    androidTestImplementation "androidx.test.ext:junit:$ui_test_junit_assertion_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+}
+
+repositories {
+    mavenCentral()
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            publicAar(MavenPublication) {
+                groupId 'com.trimble'
+                artifactId 'workfloweventscommunication'
+
+                artifact(project.tasks.named('bundleReleaseAar'))
+
+                pom {
+                    name = 'WorkflowEventsCommunication Library'
+                    description = 'A library for integrating with the Instinct platform, facilitates the transmission of events from the "Driver Workflow" app to a third-party application.' +
+                            ' You must have test approval for this to function. See project url.'
+                    url = 'https://transportation.trimble.com/developer-portal'
+
+                    licenses {
+                        license {
+                            name = 'The Apache License, Version 2.0'
+                            url = 'https://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+
+                    developers {
+                        developer {
+                            organization = 'Trimble Inc.'
+                            organizationUrl = 'https://www.trimble.com/'
+                        }
+                    }
+
+                    scm {
+                        url = 'Private Repository'
+                    }
+
+                    //Dependencies aren't automatically included
+                    //https://gist.github.com/Robyer/a6578e60127418b380ca133a1291f017
+                    withXml {
+                        final dependenciesNode = asNode().appendNode('dependencies')
+
+                        ext.addDependency = { Dependency dep, String scope ->
+                            if (dep instanceof ProjectDependency || dep.group == null || dep.version == null || dep.name == null || dep.name == "unspecified")
+                                return // ignore invalid dependencies
+
+                            final dependencyNode = dependenciesNode.appendNode('dependency')
+                            dependencyNode.appendNode('groupId', dep.group)
+                            dependencyNode.appendNode('artifactId', dep.name)
+                            dependencyNode.appendNode('version', dep.version)
+                            dependencyNode.appendNode('scope', scope)
+
+                            if (!dep.transitive) {
+                                // If this dependency is transitive, we should force exclude all its dependencies them from the POM
+                                final exclusionNode = dependencyNode.appendNode('exclusions').appendNode('exclusion')
+                                exclusionNode.appendNode('groupId', '*')
+                                exclusionNode.appendNode('artifactId', '*')
+                            } else if (!dep.properties.excludeRules.empty) {
+                                // Otherwise add specified exclude rules
+                                final exclusionNode = dependencyNode.appendNode('exclusions').appendNode('exclusion')
+                                dep.properties.excludeRules.each { ExcludeRule rule ->
+                                    exclusionNode.appendNode('groupId', rule.group ?: '*')
+                                    exclusionNode.appendNode('artifactId', rule.module ?: '*')
+                                }
+                            }
+                        }
+
+                        if (project.configurations.hasProperty('compile')) {
+                            // List all "compile" dependencies (for old Gradle)
+                            project.configurations.compile.getDependencies().each { dep -> addDependency(dep, "compile") }
+                        }
+                        // List all "api" dependencies (for new Gradle) as "compile" dependencies
+                        project.configurations.api.getDependencies().each { dep -> addDependency(dep, "compile") }
+                        // List all "implementation" dependencies (for new Gradle) as "runtime" dependencies
+                        project.configurations.implementation.getDependencies().each { dep -> addDependency(dep, "runtime") }
+                    }
+                }
+            }
+        }
+        repositories {
+            maven {
+                //def releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+                //def snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+                name = "sonatype"
+                url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+                credentials(org.gradle.api.credentials.PasswordCredentials)
+            }
+        }
+    }
+
+    signing {
+        sign publishing.publications.publicAar
+    }
+
+}

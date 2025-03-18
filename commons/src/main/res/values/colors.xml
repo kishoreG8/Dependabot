@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#343341</color>
+    <color name="textColor">#FFFFFF</color>
+    <color name="canvasPenColor">#FFFFFF</color>
+    <color name="fabMenuColor">#FFBE00</color>
+    <color name="circularProgressBarColor">#FF009AD9</color>
+    <color name="colorPrimaryDark">#262533</color>
+    <color name="outlineBoxErrorColor">#FFA500</color>
+    <color name="white">#FFFFFF</color>
+    <color name="colorAccent">#009ad9</color>
+    <color name="dialogBackground">#555555</color>
+
+    <color name="nonEditableFieldTextColor">#99FFFFFF</color>
+    <color name="nonEditableFieldBackground">#12FFFFFF</color>
+
+    <color name="defaultOutlineBoxBorderColor">#6A6976</color>
+    <color name="composeDefaultOutlineBoxBorderColor">#D9D9D9</color>
+    <color name="darkGrey">#808080</color>
+
+</resources>

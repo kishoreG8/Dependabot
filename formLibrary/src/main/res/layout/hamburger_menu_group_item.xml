@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/group_menu_icon_content_desc"
+        android:padding="@dimen/ivIcon_padding"
+        android:visibility="visible"
+        app:layout_constraintRight_toLeftOf="@id/tvHamburgerMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHamburgerMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingTop="@dimen/tvHamburgerMenu_top_padding"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/hamburger_menu_text_size"
+        app:layout_constraintLeft_toRightOf="@+id/ivIcon"
+        app:layout_constraintRight_toLeftOf="@id/ivGroupIndicator"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Messaging" />
+
+    <ImageView
+        android:id="@+id/ivGroupIndicator"
+        android:layout_width="@dimen/hamburger_menu_group_indicator_icon_size"
+        android:layout_height="@dimen/hamburger_menu_group_indicator_icon_size"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/group_menu_indicator_content_desc"
+        android:paddingTop="@dimen/hamburger_menu_group_indicator_top_padding"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tvHamburgerMenu"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

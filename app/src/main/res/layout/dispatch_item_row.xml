@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="dispatchInfo"
+            type="com.trimble.ttm.routemanifest.model.Dispatch" />
+
+        <variable
+            name="dispatchItemClickListener"
+            type="com.trimble.ttm.routemanifest.adapter.IDispatchClickListener" />
+
+        <variable
+            name="utils"
+            type="com.trimble.ttm.routemanifest.utils.Utils" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounder_corner"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="@{() -> dispatchItemClickListener.dispatchClicked(dispatchInfo)}"
+        android:padding="16dp">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".30">
+
+            <TextView
+                android:id="@+id/userData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingStart="0dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/spinnerTextColor"
+                android:textSize="@dimen/dispatchIdTextSize"
+                android:textStyle="bold"
+                tools:text="77799087687688" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingStart="0dp"
+                android:paddingEnd="10dp"
+                android:text="@string/date_created"
+                android:textColor="@color/spinnerTextColor"
+                android:textSize="@dimen/dispatchIdTextSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="@color/spinnerTextColor"
+                android:textSize="@dimen/dispatchNameTextSize"
+                tools:text="LA Z Boy LA Z Boy  LA Z Boy" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp"
+                    android:text="@string/stop"
+                    android:textColor="@color/spinnerTextColor"
+                    android:textSize="@dimen/dispatchIdTextSize"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="@{Integer.toString(dispatchInfo.StopsCountOfDispatch)}"
+                    android:textColor="@color/spinnerTextColor"
+                    android:textSize="@dimen/dispatchNameTextSize"
+                    tools:text="5" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chipContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cl_trip_detail"
+            app:layout_constraintWidth_percent=".15">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/active_trip_chip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Active Trip"
+                android:visibility="@{dispatchInfo.active ? View.VISIBLE : View.GONE}"
+                tools:visibility="visible"
+                app:chipIcon="@drawable/ic_check_circle_black_24dp"
+                app:chipIconTint="@color/green_active"
+                app:chipBackgroundColor="@color/hamburger_menu_background_color"
+                app:chipStrokeWidth="0.3dp"
+                app:chipStrokeColor="@color/white"
+                android:textColor="@color/white"
+                android:layout_margin="8dp"
+                />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_trip_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@+id/chipContainer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".40">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:paddingStart="0dp"
+                android:paddingEnd="10dp"
+                android:text="@{dispatchInfo.Name}"
+                android:textColor="@color/spinnerTextColor"
+                android:textSize="@dimen/dispatchIdTextSize"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Trip Name" />
+
+            <TextView
+                android:id="@+id/dispatch_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4sp"
+                android:textColor="@color/spinnerTextColor"
+                android:textSize="@dimen/dispatchDescriptionTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                tools:text="Lorem " />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/arrowLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cl_trip_detail"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.1">
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="@dimen/recyclerArrowIconSize"
+                android:layout_height="@dimen/recyclerArrowIconSize"
+                android:contentDescription="@string/arrow"
+                android:src="@drawable/ic_arrow_forward_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

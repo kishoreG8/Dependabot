@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        app:startDestination="@id/homeFragment"
+        tools:ignore="UnusedNavigation">
+
+    <fragment
+            android:id="@+id/homeFragment"
+            android:name="com.trimble.ttm.routemanifest.ui.fragments.HomeFragment"
+            android:label="fragment_home"
+            tools:layout="@layout/fragment_home">
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/routeHistoryFragment"
+            android:name="com.trimble.ttm.routemanifest.ui.fragments.RouteHistoryFragment"
+            android:label="fragment_route_history"
+            tools:layout="@layout/fragment_route_history" />
+    <fragment
+            android:id="@+id/savedRoutesFragment"
+            android:name="com.trimble.ttm.routemanifest.ui.fragments.SavedRoutesFragment"
+            android:label="fragment_saved_routes"
+            tools:layout="@layout/fragment_saved_routes" />
+
+</navigation>

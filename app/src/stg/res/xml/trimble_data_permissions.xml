@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trimble-data-permissions>
+    <protected-data-provider package="com.trimble.ttm.backbone">
+        <action name="read">
+            <resource>vehicle/customerid</resource>
+            <resource>vehicle/ecm/odometer_km</resource>
+            <resource>vehicle/obc/network/cellular/data_connection</resource>
+            <resource>vehicle/obc/id</resource>
+            <resource>vehicle/id</resource>
+            <resource>vehicle/ecm/engine/fuel_l</resource>
+            <resource>vehicle/obc/connection</resource>
+            <resource>vehicle/motion</resource>
+            <resource>user/current_driver</resource>
+            <resource>vehicle/eld/trailers</resource>
+            <resource>vehicle/eld/shipments</resource>
+            <resource>user/name</resource>
+            <resource>user/name/v2</resource>
+            <resource>user/eld/rule_set_id</resource>
+            <resource>user/eld/active_hos_ruleset</resource>
+            <resource>user/eld/available/time</resource>
+            <resource>user/eld/status</resource>
+            <resource>user/sign_in/status</resource>
+            <resource>user/login/status</resource>
+            <resource>user/current</resource>
+            <resource>workflow/current_trip</resource>
+            <resource>display/location</resource>
+            <resource>vehicle/ecm/connection</resource>
+            <resource>eld/trimble_eld_activated</resource>
+            <resource>eld/malfunctions</resource>
+            <resource>user/eld/diagnostics</resource>
+            <resource>vehicle/configurable_odometer_km</resource>
+            <resource>user/eld/exemptions</resource>
+            <resource>oer/manual_enabled</resource>
+            <resource>vehicle/ttc/accountid</resource>
+            <resource>user/ttc/id</resource>
+        </action>
+        <action name="write">
+            <resource>workflow/current_trip</resource>
+        </action>
+    </protected-data-provider>
+    <protected-data-provider package="com.trimble.ttm.mep.certificates">
+        <action name="token">
+            <resource>cbae6254-8dc0-4d6c-8dcf-058fa9239fea</resource>
+        </action>
+    </protected-data-provider>
+</trimble-data-permissions>

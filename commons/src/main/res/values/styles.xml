@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DialogTheme" parent="android:Widget.DatePicker">
+        <item name="colorAccent">@color/fabMenuColor</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:textColor">@color/fabMenuColor</item>
+        <item name="backgroundColor">@color/colorPrimary</item>
+        <item name="colorSurface">@color/colorPrimary</item>
+        <item name="colorOnSurface">@color/textColor</item>
+        <item name="colorOnPrimary">@color/textColor</item>
+    </style>
+
+    <style name="PermissionDialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/dialogBackground</item>
+    </style>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application android:usesCleartextTraffic="false">
+        <service
+            android:name=".service.WorkflowEventsCommunicationService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.trimble.ttm.workfloweventscommunication.service.StartWorkflowEventsCommunicationService" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,101 @@
+<resources>
+
+    <dimen name="largeTextSize">16sp</dimen>
+    <dimen name="smallTextSize">12sp</dimen>
+    <dimen name="smallestTextSize">10sp</dimen>
+
+    <dimen name="padding_size_5">5dp</dimen>
+    <dimen name="padding_size_10">10dp</dimen>
+    <dimen name="margin_size_15">15dp</dimen>
+    <dimen name="margin_size_5">5dp</dimen>
+    <dimen name="padding_size_20">20dp</dimen>
+    <dimen name="padding_size_15">15dp</dimen>
+
+    <dimen name="signature_canvas_view_height">300dp</dimen>
+    <dimen name="signature_title_size">30sp</dimen>
+    <dimen name="signatureButtonTextSize">12sp</dimen>
+
+    <dimen name="defaultLeftRightMargin">5dp</dimen>
+    <dimen name="defaultTopBottomMargin">8dp</dimen>
+    <dimen name="defaultFormsEditTextPadding">15dp</dimen>
+    <dimen name="defaultFormsEditTextHeight">60dp</dimen>
+
+    <dimen name="dialogTitleSize">16sp</dimen>
+    <dimen name="dateTimeScrollMargin">5dp</dimen>
+    <dimen name="separatorHeight">2dp</dimen>
+
+    <dimen name="bar_code_content_view">20sp</dimen>
+    <dimen name="cancel_action_button_size">24dp</dimen>
+    <dimen name="defaultToolBarSize">60dp</dimen>
+
+    <dimen name="dialog_text_padding">12dp</dimen>
+    <dimen name="image_reference_dialog_title_size">20sp</dimen>
+    <dimen name="dateTimePickerGap">20dp</dimen>
+    <dimen name="datePickerMargin">5dp</dimen>
+    <dimen name="timePickerMargin">5dp</dimen>
+
+    <dimen name="toolbarHeight">90dp</dimen>
+    <dimen name="tabLayoutHeight">50dp</dimen>
+    <dimen name="tabTextSize">14sp</dimen>
+    <dimen name="tabIndicatorHeight">4dp</dimen>
+
+    <dimen name="formsLayoutMargin">8dp</dimen>
+    <dimen name="formToolbarTextSize">18sp</dimen>
+    <dimen name="formToolbarButtonTextSize">16sp</dimen>
+    <dimen name="formListRowPadding">16dp</dimen>
+    <dimen name="recyclerArrowIconSize">20dp</dimen>
+    <dimen name="searchBarIconSize">36dp</dimen>
+    <dimen name="userListRowPadding">16dp</dimen>
+    <dimen name="checkBoxSize">24dp</dimen>
+    <dimen name="contactsToolbarTextSize">18sp</dimen>
+    <dimen name="contactsToolbarButtonTextSize">16sp</dimen>
+
+    <dimen name="image_reference_dialog_text_size">16sp</dimen>
+
+    <!--Hamburger menu-->
+    <dimen name="hamburger_menu_header_height">90dp
+    </dimen><!--Equal to route manifest toolbar height-->
+    <dimen name="hamburger_menu_drawer_width">320dp</dimen>
+    <dimen name="hamburger_menu_child_item_start_padding">56dp</dimen>
+    <dimen name="hamburger_menu_child_item_end_padding">10dp</dimen>
+    <dimen name="hamburger_menu_child_item_top_padding">5dp</dimen>
+    <dimen name="hamburger_menu_child_item_bottom_padding">5dp</dimen>
+    <dimen name="hamburger_menu_text_size">22sp</dimen>
+    <dimen name="hamburger_menu_group_indicator_icon_size">36dp</dimen>
+    <dimen name="hamburger_menu_header_title_start_margin">36dp</dimen>
+    <dimen name="hamburger_menu_header_title_text_size">20sp</dimen>
+    <dimen name="ivIcon_padding">4dp</dimen>
+    <dimen name="tvHamburgerMenu_top_padding">9dp</dimen>
+    <dimen name="hamburger_menu_group_indicator_top_padding">11dp</dimen>
+    <dimen name="activityFormPadding">7dp</dimen>
+
+    <!--EDVIR inspection-->
+    <dimen name="inspection_list_row_padding">16dp</dimen>
+    <dimen name="inspection_row_text_size">16sp</dimen>
+
+    <!--Messaging List-->
+    <dimen name="sender_name_width">100dp</dimen>
+    <dimen name="subject_width">100dp</dimen>
+    <dimen name="pagination_progressbar_dimen">50dp</dimen>
+
+    <!--Driver TTS player widget-->
+    <dimen name="playerWidgetHeight">120dp</dimen>
+    <dimen name="playerWidgetWidth">384dp</dimen>
+    <dimen name="playerWidgetPlayButtonHeight">68dp</dimen>
+    <dimen name="playerWidgetPlayButtonWidth">146dp</dimen>
+    <dimen name="playerWidgetNextButtonHeight">68dp</dimen>
+    <dimen name="playerWidgetNextButtonWidth">79dp</dimen>
+    <dimen name="playerWidgetPreviousButtonHeight">68dp</dimen>
+    <dimen name="playerWidgetPreviousButtonWidth">79dp</dimen>
+    <dimen name="playerWidgetIconButtonHeight">0dp</dimen>
+    <dimen name="playerWidgetIconButtonWidth">0dp</dimen>
+    <dimen name="playerWidgetProgressBarHeight">13dp</dimen>
+    <dimen name="playerWidgetProgressBarWidth">312dp</dimen>
+    <dimen name="playerWidgetInnerRectangleWidth">320dp</dimen>
+    <dimen name="playerWidgetMessageCountSize">24sp</dimen>
+    <dimen name="playerWidgetMessageTimeSize">10sp</dimen>
+    <dimen name="playerWidgetButtonMargin">4dp</dimen>
+    <dimen name="playerWidgetTextTopMargin">6dp</dimen>
+    <dimen name="playerWidgetInstinctIconMargin">16dp</dimen>
+
+</resources>

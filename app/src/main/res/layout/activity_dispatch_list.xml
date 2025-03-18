@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:fitsSystemWindows="true"
+    tools:context="com.trimble.ttm.routemanifest.ui.activities.DispatchListActivity"
+    tools:openDrawer="start">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.compose.ui.platform.ComposeView
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbarBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tabLayoutHeight"
+            android:layout_below="@id/toolbar"
+            android:background="@color/colorPrimary"
+            app:tabGravity="start"
+            app:tabIndicatorColor="@color/tabIndicator"
+            app:tabIndicatorHeight="@dimen/tabIndicatorHeight"
+            app:tabMode="scrollable"
+            app:tabTextAppearance="@style/CustomTabText"
+            app:tabTextColor="@color/color_white"
+            android:layout_marginBottom="@dimen/marginFromTabIndicator"/>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tabLayout" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/hamburgerMenuLayout"
+        layout="@layout/hamburger_menu_layout" />
+</androidx.drawerlayout.widget.DrawerLayout>

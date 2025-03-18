@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<restrictions xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <restriction
+        android:description="@string/workflow_events_description"
+        android:key="Workflow_Events_Communication"
+        android:restrictionType="string"
+        android:title="@string/workflow_events_title" />
+
+    <restriction
+        android:description="@string/workflow_polygonal_out_description"
+        android:key="Workflow_Polygonal_Out"
+        android:restrictionType="bool"
+        android:title="@string/workflow_polygon_out_title"
+        android:defaultValue="false"/>
+
+
+    <restriction
+        android:description="@string/deep_link_configuration_description"
+        android:key="deepLinkConfiguration"
+        android:restrictionType="bundle"
+        android:title="@string/deep_link_configuration_title">
+
+        <restriction
+            android:description="@string/parameter_app_name_description"
+            android:key="appName"
+            android:restrictionType="string"
+            android:title="@string/parameter_app_name_title" />
+
+
+        <restriction
+            android:description="@string/trigger_description"
+            android:key="triggerValue"
+            android:restrictionType="choice"
+            android:entries="@array/entries_trigger"
+            android:entryValues="@array/entry_values_trigger"
+            android:title="@string/trigger_title" />
+
+
+    <restriction
+        android:description="@string/parameters_description"
+        android:key="formRelatedConfigurationList"
+        android:restrictionType="bundle"
+        android:title="@string/parameters_title">
+
+        <restriction
+            android:description="@string/parameter_one_description"
+            android:key="formRelatedConfiguration1"
+            android:restrictionType="bundle"
+            android:title="@string/parameter_one_title">
+
+            <restriction
+                android:description="@string/form_name_description"
+                android:key="formName1"
+                android:restrictionType="string"
+                android:title="@string/form_name_title" />
+
+            <restriction
+                android:description="@string/form_id_description"
+                android:key="formId1"
+                android:restrictionType="string"
+                android:title="@string/form_id_title" />
+
+            <restriction
+                android:description="@string/uuid_description"
+                android:key="uuid1"
+                android:restrictionType="string"
+                android:title="@string/uuid_title" />
+
+            <restriction
+                android:description="@string/deep_link_url_description"
+                android:key="deepLinkUrl1"
+                android:restrictionType="string"
+                android:title="@string/deep_link_url_title" />
+
+            <restriction
+                android:description="@string/field_value_exists_description"
+                android:key="fieldValueExists1"
+                android:restrictionType="string"
+                android:title="@string/field_value_exists_title" />
+
+            <restriction
+                android:description="@string/field_value_not_exists_description"
+                android:key="fieldValueNotExists1"
+                android:restrictionType="string"
+                android:title="@string/field_value_not_exists_title" />
+
+            <restriction
+                android:description="@string/field_and_value_equals_description"
+                android:key="fieldAndValueEquals1"
+                android:restrictionType="string"
+                android:title="@string/field_and_value_equals_title" />
+
+        </restriction>
+
+        <restriction
+            android:description="@string/parameter_two_description"
+            android:key="formRelatedConfiguration2"
+            android:restrictionType="bundle"
+            android:title="@string/parameter_two_title">
+
+            <restriction
+                android:description="@string/form_name_description"
+                android:key="formName2"
+                android:restrictionType="string"
+                android:title="@string/form_name_title" />
+
+            <restriction
+                android:description="@string/form_id_description"
+                android:key="formId2"
+                android:restrictionType="string"
+                android:title="@string/form_id_title" />
+
+            <restriction
+                android:description="@string/uuid_description"
+                android:key="uuid2"
+                android:restrictionType="string"
+                android:title="@string/uuid_title" />
+
+            <restriction
+                android:description="@string/deep_link_url_description"
+                android:key="deepLinkUrl2"
+                android:restrictionType="string"
+                android:title="@string/deep_link_url_title" />
+
+            <restriction
+                android:description="@string/field_value_exists_description"
+                android:key="fieldValueExists2"
+                android:restrictionType="string"
+                android:title="@string/field_value_exists_title" />
+
+            <restriction
+                android:description="@string/field_value_not_exists_description"
+                android:key="fieldValueNotExists2"
+                android:restrictionType="string"
+                android:title="@string/field_value_not_exists_title" />
+
+
+            <restriction
+                android:description="@string/field_and_value_equals_description"
+                android:key="fieldAndValueEquals2"
+                android:restrictionType="string"
+                android:title="@string/field_and_value_equals_title" />
+
+        </restriction>
+
+
+        <restriction
+            android:description="@string/parameter_three_description"
+            android:key="formRelatedConfiguration3"
+            android:restrictionType="bundle"
+            android:title="@string/parameter_three_title">
+
+            <restriction
+                android:description="@string/form_name_description"
+                android:key="formName3"
+                android:restrictionType="string"
+                android:title="@string/form_name_title" />
+
+            <restriction
+                android:description="@string/form_id_description"
+                android:key="formId3"
+                android:restrictionType="string"
+                android:title="@string/form_id_title" />
+
+            <restriction
+                android:description="@string/uuid_description"
+                android:key="uuid3"
+                android:restrictionType="string"
+                android:title="@string/uuid_title" />
+
+            <restriction
+                android:description="@string/deep_link_url_description"
+                android:key="deepLinkUrl3"
+                android:restrictionType="string"
+                android:title="@string/deep_link_url_title" />
+
+            <restriction
+                android:description="@string/field_value_exists_description"
+                android:key="fieldValueExists3"
+                android:restrictionType="string"
+                android:title="@string/field_value_exists_title" />
+
+            <restriction
+                android:description="@string/field_value_not_exists_description"
+                android:key="fieldValueNotExists3"
+                android:restrictionType="string"
+                android:title="@string/field_value_not_exists_title" />
+
+            <restriction
+                android:description="@string/field_and_value_equals_description"
+                android:key="fieldAndValueEquals3"
+                android:restrictionType="string"
+                android:title="@string/field_and_value_equals_title" />
+
+        </restriction>
+    </restriction>
+
+        <restriction
+            android:description="@string/additional_parameters_description"
+            android:key="formRelatedConfigurationListArray"
+            android:restrictionType="bundle_array"
+            android:title="@string/additional_parameters">
+
+            <restriction
+                android:description="@string/additional_parameter_description"
+                android:key="formRelatedConfiguration"
+                android:restrictionType="bundle"
+                android:title="@string/additional_parameter">
+
+                <restriction
+                    android:description="@string/form_name_description"
+                    android:key="formName"
+                    android:restrictionType="string"
+                    android:title="@string/form_name_title" />
+
+                <restriction
+                    android:description="@string/form_id_description"
+                    android:key="formId"
+                    android:restrictionType="string"
+                    android:title="@string/form_id_title" />
+
+                <restriction
+                    android:description="@string/uuid_description"
+                    android:key="uuid"
+                    android:restrictionType="string"
+                    android:title="@string/uuid_title" />
+
+                <restriction
+                    android:description="@string/deep_link_url_description"
+                    android:key="deepLinkUrl"
+                    android:restrictionType="string"
+                    android:title="@string/deep_link_url_title" />
+
+                <restriction
+                    android:description="@string/field_value_exists_description"
+                    android:key="fieldValueExists"
+                    android:restrictionType="string"
+                    android:title="@string/field_value_exists_title" />
+
+                <restriction
+                    android:description="@string/field_value_not_exists_description"
+                    android:key="fieldValueNotExists"
+                    android:restrictionType="string"
+                    android:title="@string/field_value_not_exists_title" />
+
+                <restriction
+                    android:description="@string/field_and_value_equals_description"
+                    android:key="fieldAndValueEquals"
+                    android:restrictionType="string"
+                    android:title="@string/field_and_value_equals_title" />
+
+            </restriction>
+
+        </restriction>
+
+
+    </restriction>
+
+</restrictions>

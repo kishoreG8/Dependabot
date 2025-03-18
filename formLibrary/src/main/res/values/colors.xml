@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#343341</color>
+    <color name="colorPrimaryDark">#262533</color>
+    <color name="colorAccent">#009ad9</color>
+    <color name="textColor">#FFFFFF</color>
+    <color name="canvasPenColor">#000000</color>
+
+    <color name="dark_gray">#808080</color>
+    <color name="dialogBackground">#555555</color>
+    <color name="defaultOutlineBoxBorderColor">#6A6976</color>
+
+    <!--from toolbar lib-->
+    <color name="spinnerViewColor">#363545</color>
+
+    <color name="outlineBoxErrorColor">#FFA500</color>
+    <color name="outlineBoxSelectedColor">#009Ad9</color>
+    <color name="white">#FFFFFF</color>
+    <color name="silver">#C0C0C0</color>
+
+    <color name="toolBarColor">#363545</color>
+    <color name="toolbarBackground">#262533</color>
+    <color name="tabIndicator">#FFBE00</color>
+    <color name="lightGrey">#90939F</color>
+
+
+    <color name="progressBarColor">#FFBE00</color>
+    <color name="fabMenuColor">#FFBE00</color>
+
+    <color name="search_bar_border_stroke">#6a6a77</color>
+    <color name="search_bar_hint_color">#6a6a77</color>
+    <color name="search_bar_icon_color">#6A6A77</color>
+
+    <color name="hamburger_menu_background_color">#343341
+    </color><!--Same as apps' colorPrimary value-->
+    <color name="divider_line_color">#7b7a86</color>
+
+    <color name="nonEditableFieldTextColor">#99FFFFFF</color>
+    <color name="nonEditableFieldBackground">#12FFFFFF</color>
+
+    <color name="widgetBackgroundPrimary">#363545</color>
+    <color name="widgetBackgroundSecondary">#474655</color>
+    <color name="widgetBackgroundButtonPressed">#292838</color>
+    <color name="widgetButtonColor">#005f9e</color>
+    <color name="widgetButtonColorPressed">#00437b</color>
+    <color name="widgetProgressBarBackground">#c4c4c4</color>
+    <color name="circularProgressBarColor">#FF009AD9</color>
+</resources>

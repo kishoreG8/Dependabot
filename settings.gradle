@@ -1,0 +1,45 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven {
+            url "https://artifactory.trimble.tools/artifactory/ttm-mobile-ecosystem-maven"
+            credentials {
+                username = "${artifactory_user}"
+                password = "${artifactory_password}"
+            }
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url "https://artifactory.trimble.tools/artifactory/ttm-mobile-ecosystem-maven"
+            credentials {
+                username = "${artifactory_user}"
+                password = "${artifactory_password}"
+            }
+        }
+    }
+}
+
+include ':app', ':formLibrary', ':macrobenchmark', ':commons', ':workfloweventscommunication'
+ext.IS_CI_RUN = System.getenv().containsKey("CI_RUN")
+buildCache {
+    local {
+        enabled = !IS_CI_RUN
+    }
+    remote(HttpBuildCache) {
+        url = "https://artifactory.trimble.tools/artifactory/pnet-gradle-cache-generic/"
+        credentials {
+          username = "${artifactory_user}"
+          password = "${artifactory_password}"
+        }
+        push = IS_CI_RUN
+    }
+}
+

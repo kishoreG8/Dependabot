@@ -1,0 +1,157 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'com.jfrog.artifactory'
+    id 'maven-publish'
+    id 'kotlin-parcelize'
+}
+
+apply plugin: 'ttm-jacoco-android-plugin'
+
+jacoco {
+    toolVersion '0.8.12'
+}
+
+coverageConfig {
+    variant 'debug'
+    packages = ['com.trimble.ttm.commons']
+}
+
+rootProject.tasks['sonarqube'].dependsOn "${name}:test${coverageConfig.variant.capitalize()}UnitTest"
+
+android {
+    compileSdk compile_sdk_version
+
+    defaultConfig {
+        minSdk min_sdk_version
+        targetSdk target_sdk_version
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        compose = true
+    }
+
+    kotlinOptions {
+        freeCompilerArgs += ["-Xuse-experimental=kotlinx.coroutines.ExperimentalCoroutinesApi", "-opt-in=kotlin.RequiresOptIn", "-Xjvm-default=all"]
+        jvmTarget = '17'
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion compose_kotlin_compiler_version
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            returnDefaultValues=true
+        }
+        packagingOptions {
+            jniLibs {
+                useLegacyPackaging true
+            }
+        }
+    }
+
+    namespace 'com.trimble.ttm.commons'
+}
+
+dependencies {
+    implementation("com.trimble:ttm-certificates-api:$certificates_api_lib")
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
+
+    //Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
+
+    //Google Firebase Libraries
+    implementation platform("com.google.firebase:firebase-bom:$firbase_bom_version")
+    implementation 'com.google.firebase:firebase-firestore' // FireStore database
+    implementation 'com.google.firebase:firebase-messaging' // FCM
+    implementation 'com.google.firebase:firebase-functions' //Functions
+    implementation 'com.google.firebase:firebase-auth' //Authentication
+    implementation 'com.google.firebase:firebase-storage' //Storage
+    //System Trace library for custom performance analysis
+    api "androidx.tracing:tracing-ktx:$tracing_version"
+    api 'com.google.firebase:firebase-analytics' //Analytics
+
+    //Dependency Injection Libraries
+    implementation "io.insert-koin:koin-android:$koin_version"
+
+    //Trimble Libraries
+    implementation "com.trimble:launchercommunicationcommons:$launchercommunication_lib_version"
+    implementation "com.trimble:maine-custom-toolbar:$maine_toolbar_version"
+    implementation "com.trimble:ttm-mep-backbone-api:$backbone_api_version"
+    api "com.trimble:ttm-mep-log-api:$log_aggregator"
+
+    //DataStore
+    implementation("androidx.datastore:datastore-preferences:$datastore_version")
+
+    //Material Library
+    implementation "com.google.android.material:material:$material_version"
+
+    //Gson
+    implementation("com.google.code.gson:gson:$gson_version")
+
+    //Compose Libraries
+    api platform("androidx.compose:compose-bom:$compose_bom_version")
+    api "androidx.compose.ui:ui"
+    api "androidx.compose.ui:ui-tooling"
+    api "androidx.compose.foundation:foundation"
+    api "androidx.compose.material:material"
+    api "androidx.compose.material:material-icons-core"
+    api "androidx.lifecycle:lifecycle-runtime-compose"
+    api "androidx.compose.material:material-icons-extended"
+    api "androidx.activity:activity-compose:$activity_version"
+    api "androidx.compose.foundation:foundation-layout"
+    api "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version"
+    api "androidx.compose.runtime:runtime-livedata"
+    api "androidx.compose.ui:ui-tooling-preview"
+    api "androidx.constraintlayout:constraintlayout-compose:$constraint_layout_compose_version"
+
+    /**
+     * In general We should not use both Material2 and Material3 in a single app long-term.
+     * This is due to the fact that the two design systems and respective libraries differ
+     * significantly in terms of their UX/UI designs and Compose implementations.
+     */
+    implementation "androidx.compose.material3:material3:$material3_version"
+
+    //ToastCompat to prevent crash in toast (V7.1 devices)
+    api "me.drakeet.support:toastcompat:$custom_toast_lib_version"
+
+    implementation "com.google.android.gms:play-services-code-scanner:$gms_barcode_scanner_version"
+
+    implementation "com.google.android.gms:play-services-base:$gms_play_services_base_version"
+    implementation 'androidx.lifecycle:lifecycle-process:2.8.7'
+
+    //Testing Libraries
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$junit_jupiter_version"
+    androidTestImplementation "androidx.test.ext:junit:$ui_test_junit_assertion_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+    testImplementation "io.mockk:mockk:$mockk_version"
+    testImplementation "io.insert-koin:koin-test:$koin_version"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
+    testImplementation "androidx.arch.core:core-testing:$core_testing_version"
+
+    // UI Tests
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4"
+    debugImplementation "androidx.compose.ui:ui-test-manifest"
+
+}

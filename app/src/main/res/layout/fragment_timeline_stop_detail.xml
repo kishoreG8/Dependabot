@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="dispatchDetailViewModel"
+            type="com.trimble.ttm.routemanifest.viewmodel.DispatchDetailViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/bottomCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/previousSize"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/previousStop"
+                style="@style/Widget.AppCompat.ActionButton"
+                android:layout_width="@dimen/previousSize"
+                android:layout_height="@dimen/previousSize"
+                android:layout_gravity="center"
+                android:contentDescription="@string/previousStop"
+                android:onClick="@{() -> dispatchDetailViewModel.getPreviousStop()}"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_arrow_previous_24dp"
+                android:visibility="@{safeUnbox(dispatchDetailViewModel.previousStopAvailable)?View.VISIBLE:View.INVISIBLE}" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvETA"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text='@{dispatchDetailViewModel.eTAForStop ?? ""}'
+            android:textColor="@color/appSecondaryTextColor"
+            android:textSize="@dimen/timeLineStopDetailETATextSize"
+            android:textStyle="bold"
+            tools:text="9:30 AM" />
+
+        <TextView
+            android:id="@+id/stopTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_weight="6"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@{dispatchDetailViewModel.currentStop.Name}"
+            android:textColor="@color/appSecondaryTextColor"
+            android:textSize="@dimen/stopInfoTextSize"
+            android:textStyle="bold"
+            tools:text="LA Z Boy - Drop Supplies XYZ" />
+
+        <TextView
+            android:id="@+id/stopAddress1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/appSecondaryTextColor"
+            android:textSize="@dimen/addressTextSize"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:text="1054 Highland Ave SE\nNeosho, MO 64850dddddd" />
+
+        <LinearLayout
+            android:layout_width="@dimen/nextSize"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/nextStop"
+                style="@style/Widget.AppCompat.ActionButton"
+                android:layout_width="@dimen/nextSize"
+                android:layout_height="@dimen/nextSize"
+                android:layout_gravity="center"
+                android:contentDescription="@string/nextStop"
+                android:onClick="@{() -> dispatchDetailViewModel.getNextStop()}"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_arrow_next_24dp"
+                android:visibility="@{safeUnbox(dispatchDetailViewModel.nextStopAvailable)?View.VISIBLE:View.INVISIBLE}" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

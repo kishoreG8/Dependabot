@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="data_expose_permission">com.trimble.ttm.routemanifest.DATA_EXPOSE_PERMISSION</string>
+    <string name="mtrl_picker_cancel" tools:override="true">Clear</string>
+    <string name="ok_text">OK</string>
+    <string name="clear_text">CLEAR</string>
+    <string name="cancel_text" tools:ignore="ButtonCase">CANCEL</string>
+    <string name="choose_date">Choose Date</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_time">Select Time</string>
+    <string name="pickup_date_and_time">Pick up date and time</string>
+    <string name="choose_any_option">Choose any option</string>
+    <string name="what_is_your_age">What is your age</string>
+    <string name="could_not_process">Sorry could not process your data</string>
+    <string name="signature_empty_customer_warning_text">Draw signature to save</string>
+    <string name="signature">Add Signature</string>
+    <string name="cancel">CANCEL</string>
+    <string name="clear">CLEAR</string>
+    <string name="save">SAVE</string>
+    <string name="send">SEND</string>
+    <string name="loading_text">Loading…</string>
+    <string name="cancel_button_description">Cancel Button</string>
+    <string name="form_not_a_valid_number">*Entered field can not be empty and should be a valid number</string>
+    <string name="cannot_be_empty">Cannot be empty</string>
+    <string name="retry_button_text">RETRY</string>
+
+    <string name="scan_barcode">Scan Barcode</string>
+    <string name="scan_bar_code_error_exceed_count">Scanned maximum/allowed number of codes.Delete existing code to scan again</string>
+    <string name="scan_bar_code_info">Show code to scan</string>
+    <string name="scan_bar_code_error_duplicate">Duplicate entries are not allowed</string>
+    <string name="scan_bar_code_info_allowed_count">Scanned maximum/allowed number of codes</string>
+    <string name="tap_here_to_scan">Tap here to scan</string>
+
+    <!--Permission-->
+    <string name="permission_text">Permissions Required</string>
+    <string name="permission_msg">To provide a seamless experience, please allow the Workflow app to appear on top of other apps.</string>
+    <string name="notification_permission_message">Notification Permission is required. Please enable in settings</string>
+    <string name="go_to_settings">GO TO SETTINGS</string>
+    <string name="image_not_found">Image not found.</string>
+
+    <!--Workflow Managed Configuration-->
+    <string name="workflow_events_title">Workflow Events</string>
+    <string name="workflow_polygon_out_title">Workflow Polygonal Opt Out</string>
+    <string name="workflow_events_description">Enter the package name of the application that will utilize the workflow events.  ex. "com.sec.android.camera"</string>
+    <string name="workflow_polygonal_out_description">Opt out the Polygonal geofence</string>
+
+    <!--Deep Link Configuration -->
+    <string name="deep_link_configuration_title">Deep Link Configuration</string>
+    <string name="deep_link_configuration_description">Use the following options to configure your deep link</string>
+    <string name="parameter_app_name_title">App to be used</string>
+    <string name="parameter_app_name_description">Enter the name of the application you wish to configure</string>
+    <string name="parameters_title">Parameters</string>
+    <string name="additional_parameters_description">Enter the additional parameters Value</string>
+    <string name="additional_parameters">Additional Parameters</string>
+    <string name="additional_parameter_description">Enter the additional parameter Value</string>
+    <string name="additional_parameter">Additional Parameter</string>
+    <string name="parameters_description">Enter the parameters value</string>
+    <string name="parameter_one_title">Parameter 1</string>
+    <string name="parameter_one_description">Enter the first parameter value</string>
+    <string name="parameter_two_title">Parameter 2</string>
+    <string name="parameter_two_description">Enter the second parameter value</string>
+    <string name="parameter_three_title">Parameter 3</string>
+    <string name="parameter_three_description">Enter the third parameter value</string>
+    <string name="trigger_title">Trigger</string>
+    <string name="trigger_description">Choose any option for trigger</string>
+    <string name="on_arrival">On Arrival - *Note that whenever you choose this option, you only need to fill deep link url information and form related information is not needed to be filled in the parameters section.</string>
+    <string name="on_form_submission">On Form Submission - *Note that whenever you choose this option, you must fill in the fields in the parameters section.</string>
+    <string-array name="entries_trigger">
+        <item>@string/on_arrival</item>
+        <item>@string/on_form_submission</item>
+    </string-array>
+    <string-array name="entry_values_trigger">
+        <item>Arrival</item>
+        <item>Form Submission</item>
+    </string-array>
+    <string name="form_name_title">Form Name</string>
+    <string name="form_name_description">Enter the form name</string>
+    <string name="form_id_title">Form Id</string>
+    <string name="form_id_description">Enter the form id</string>
+    <string name="uuid_title">UUID</string>
+    <string name="uuid_description">Enter the value for the uuid - *Note you may need to work with your 3rd party app to obtain this value.</string>
+    <string name="deep_link_url_title">Deep Link URL</string>
+    <string name="deep_link_url_description">Enter the deep link url - *Note you may need to work with your 3rd party app to obtain this URL</string>
+    <string name="field_value_exists_title">Trigger off Field - Any Value</string>
+    <string name="field_value_exists_description">*Type field name, if value in respective field is NOT empty, deep link will launch </string>
+    <string name="field_value_not_exists_title">Trigger off Field - Empty Value</string>
+    <string name="field_value_not_exists_description">*Type field name, if value in respective field is empty, deep link will launch</string>
+    <string name="field_and_value_equals_title">Trigger off Field - Specific Value</string>
+    <string name="field_and_value_equals_description">*Type field name and corresponding value - if value matches, deep link will launch</string>
+
+
+</resources>

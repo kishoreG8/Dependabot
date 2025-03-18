@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+            android:id="@+id/imageReferenceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+                android:id="@+id/rlImageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true">
+
+            <ImageView
+                    android:id="@+id/ivUploadableImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:animateLayoutChanges="true"
+                    android:contentDescription="@string/preview_image" />
+
+            <ImageView
+                    android:id="@+id/ivRemove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:contentDescription="@string/cancel"
+                    android:padding="8dp"
+                    app:tint="@color/colorPrimaryDark"
+                    android:src="@drawable/ic_delete_white" />
+        </RelativeLayout>
+
+        <TextView
+                android:id="@+id/tvQtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:animateLayoutChanges="true"
+                android:drawablePadding="12dp"
+                android:textColor="@color/textColor"
+                android:textSize="16sp" />
+        <TextView
+            android:id="@+id/errorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:text="@string/cannot_be_empty"
+            android:textColor="@color/outlineBoxErrorColor"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</merge>

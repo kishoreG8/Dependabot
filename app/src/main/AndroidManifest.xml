@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <queries>
+        <package android:name="com.trimble.ttm.backbone.api" />
+        <package android:name="com.trimble.ttm.toolbar" />
+        <package android:name="com.trimble.ttm.instinct.core.services" />
+        <package android:name="com.trimble.ttm.instinct.core.services.private" />
+        <package android:name="com.trimble.launchercommunicationlib" />
+        <package android:name="com.trimble.ttm.applauncher.stg" />
+        <package android:name="com.trimble.ttm.applauncher" />
+        <package android:name="com.linde.mobile.obc.delivery.dev" />
+        <package android:name="com.linde.mobile.obc.delivery" />
+        <package android:name="com.trimble.ttm.kroger" />
+        <package android:name="com.trimble.ttm.paulshauling" />
+        <package android:name="com.trimble.ttm.workbreak" />
+        <package android:name="com.trimble.ttm.clitanker" />
+        <package android:name="com.trimble.ttm.sourceone" />
+        <package android:name="com.trimble.ttm.seaboardtanker" />
+        <package android:name="com.trimble.ttm.brennertankerwf" />
+        <package android:name="com.trimble.ttm.marathontanker" />
+        <package android:name="com.trimble.ttm.speedway" />
+        <package android:name="com.trimble.ttm.sentinel" />
+        <package android:name="com.trimble.ttm.reliabletanker" />
+        <package android:name="com.trimble.ttm.williamstanker" />
+        <package android:name="com.trimble.ttm.crystalflashtanker" />
+        <package android:name="com.trimble.ttm.chstanker" />
+        <package android:name="com.trimble.ttm.marathoncrude" />
+        <package android:name="com.trimble.ttm.dkl" />
+        <package android:name="com.trimble.ttm.gulfmark" />
+        <package android:name="com.trimble.ttm.asphaltexpress" />
+        <package android:name="com.trimble.ttm.chscrude" />
+        <package android:name="com.trimble.ttm.southeasttransport" />
+        <package android:name="com.trimble.ttm.toyotalogistics" />
+        <package android:name="com.trimble.ttm.woodgrain" />
+        <package android:name="com.trimble.ttm.unfi" />
+        <package android:name="com.trimble.ttm.frito" />
+        <package android:name="com.trimble.ttm.centurionautohauler" />
+    </queries>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+
+    <application
+        android:name=".application.WorkflowApplication"
+        android:allowBackup="false"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_app_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:name">
+        <uses-library
+            android:name="com.google.android.maps" />
+        <activity
+            android:name=".ui.activities.TripPanelPositiveActionTransitionScreenActivity"
+            android:exported="false"
+            android:label="@string/title_activity_trip_panel_positive_action_transition_screen"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme" />
+
+        <service
+            android:name=".service.EventsProcessingForegroundService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="shortService"
+            android:permission="android.permission.FOREGROUND_SERVICE">
+            <intent-filter>
+                <action android:name="com.trimble.ttm.routemanifest.service.StartEventsProcessingForegroundService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.TripPanelNegativeActionShortForegroundService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="shortService">
+            <intent-filter>
+                <action android:name="com.trimble.ttm.routemanifest.service.TripPanelNegativeActionShortForegroundService" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="android.content.APP_RESTRICTIONS"
+            android:resource="@xml/app_restrictions" />
+
+        <activity
+            android:name=".ui.activities.AuthenticateActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.trimble.ttm.formlibrary.widget.DriverTtsWidget"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/driver_tts_widget_provider" />
+        </receiver>
+        <receiver
+            android:name=".widget.TripInfoWidget"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/trip_info_widget_provider" />
+        </receiver>
+        <receiver
+            android:name=".receiver.AppUpdateReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".receiver.BootCompleteReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.activities.StopDetailActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activities.DispatchListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:label="@string/title_activity_main"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="intent.action.dispatchlist" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.DispatchDetailActivity"
+            android:configChanges="mcc|mnc|locale|keyboard|keyboardHidden|orientation|screenSize|fontScale|uiMode"
+            android:exported="false"
+            android:label="@string/title_activity_main"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="intent.action.dispatchdetail" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.FormActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="intent.action.formactivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.TransitionScreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activities.ComposeFormActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="intent.action.composeformactivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".service.RouteManifestForegroundService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Our application continuously monitors vehicle data via a vehicle connector, prompting drivers to complete the necessary forms for their trips. To ensure timely prompts for vehicle inspection and dispatch forms, the app’s foreground service runs continuously, tracking the truck's motion (ON/OFF) and ignition status every 5 seconds. This real-time tracking ensures that drivers are notified to complete the required forms at the appropriate times based on the truck’s location" />
+        </service>
+        <service
+            android:name=".service.RouteManifestNotificationService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.AuthenticationForegroundService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="shortService"
+            android:permission="android.permission.FOREGROUND_SERVICE">
+            <intent-filter>
+                <action android:name="com.trimble.ttm.service.START_ON_BOOTSTRAP_COMPLETED" />
+                <action android:name="com.trimble.ttm.service.START" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".ui.activities.NotificationRedirectionActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar">
+            <intent-filter>
+                <!-- We must have this activity as an entry point to avoid "flicks" after clicking in a notification -->
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.DetentionWarningActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar">
+            <intent-filter>
+                <!-- We must have this activity as an entry point to avoid "flicks" after clicking in a notification -->
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="RMChannel" />
+
+        <provider
+            android:name=".contentProvider.DrawableResDataProvider"
+            android:authorities="com.trimble.ttm.routemanifest"
+            android:exported="true"
+            android:grantUriPermissions="true"
+            android:permission="@string/data_expose_permission" />
+        <!-- enables profiling for macrobenchmark -->
+        <profileable
+            android:enabled="true"
+            android:shell="true"
+            tools:targetApi="q" />
+
+        <receiver android:name=".receiver.ChangeUserReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.trimble.ttm.mobile.auth.ACTION_CHANGE_USER" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,79 @@
+plugins {
+    id 'com.android.test'
+    id 'org.jetbrains.kotlin.android'
+    id 'androidx.baselineprofile'
+}
+
+android {
+    compileSdk 34
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    defaultConfig {
+        minSdk 28
+        targetSdk target_sdk_version
+        missingDimensionStrategy 'environment', 'stg'
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        // To run macrobenchmark in emulators and debug. Enable this only for debugging purpose.
+        // Traces can be analysed from 3rd party tools like perfetto. For that to work properly,
+        // the following arg should be commented out. Record traces by disabling this and have profileable true in app manifest
+        // testInstrumentationRunnerArguments["androidx.benchmark.suppressErrors"] = 'EMULATOR, DEBUGGABLE, LOW-BATTERY'
+    }
+
+    buildTypes {
+        /* The buildType mentioned here should be one amongst the app modules build variant.
+         * StgRelease is hardcoded as build type here. So, a valid keystore properties should be given in
+         * app module's gradle file. Generate a local keystore and pass those properties to signingConfigs
+         * stg flavor.
+         * Example:
+         * storeFile file('C:\\Users\\Trimble\\Android_Keystore\\MacrobenchmarkKeystore.jks')
+         * storePassword 'macrobenchmark'
+         * keyAlias 'macrobenchmark'
+         * keyPassword 'macrobenchmark'
+         *
+         * Note:
+         * Always prefer release builds for benchmarks
+        **/
+        stgRelease {
+            debuggable false
+            signingConfig signingConfigs.debug
+            matchingFallbacks = ["release"]
+        }
+    }
+
+    targetProjectPath ':app'
+    namespace 'com.trimble.ttm.routemanifest.macrobenchmark'
+    experimentalProperties["android.experimental.self-instrumenting"] = true
+
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
+    }
+}
+
+androidComponents {
+    beforeVariants(selector().all()) {
+        enabled = buildType == "stgRelease"
+    }
+}
+baselineProfile {
+
+    // This enables using connected devices to generate profiles. The default is
+    // true. When using connected devices, they must be rooted or API 33 and
+    // higher.
+    useConnectedDevices true
+}
+
+dependencies {
+    implementation "androidx.test.ext:junit:$ui_test_junit_assertion_version"
+    implementation "androidx.test.espresso:espresso-core:$espresso_version"
+    implementation "androidx.test.uiautomator:uiautomator:$ui_automator_version"
+    implementation "org.junit.jupiter:junit-jupiter-api:$junit_jupiter_version"
+    implementation 'androidx.benchmark:benchmark-macro-junit4:1.2.3'
+}

@@ -1,0 +1,149 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="toolbarHeight">90dp</dimen>
+
+    <dimen name="tabIndicatorHeight">4dp</dimen>
+    <dimen name="tabLayoutHeight">50dp</dimen>
+    <dimen name="pagerPadding">35dp</dimen>
+    <dimen name="separatorHeight">2dp</dimen>
+    <dimen name="marginFromTabIndicator">14dp</dimen>
+    <dimen name="distanceTextSize">15sp</dimen>
+    <dimen name="stopInfoTextSize">16sp</dimen>
+    <dimen name="textFormTextSize">12sp</dimen>
+    <dimen name="addressTextSize">10sp</dimen>
+    <dimen name="tabTextSize">14sp</dimen>
+
+    <dimen name="largestTextSize">18sp</dimen>
+    <dimen name="largeTextSize">16sp</dimen>
+    <dimen name="mediumTextSize">14sp</dimen>
+    <dimen name="smallTextSize">12sp</dimen>
+    <dimen name="smallestTextSize">10sp</dimen>
+
+    <dimen name="recyclerCardHeight">60dp</dimen>
+    <dimen name="recyclerLayoutStartPadding">5dp</dimen>
+    <dimen name="recyclerSeparatorHeight">1dp</dimen>
+
+    <dimen name="distanceTextTopMargin">10dp</dimen>
+    <dimen name="distanceTextBottomMargin">10dp</dimen>
+    <dimen name="totalMilesStartMargin">16dp</dimen>
+    <dimen name="totalStopsStartMargin">5dp</dimen>
+
+    <dimen name="stopListPadding">0dp</dimen>
+    <dimen name="recyclerArrowIconSize">20dp</dimen>
+    <dimen name="navigateIconSize">20dp</dimen>
+    <dimen name="stopActionSize">20dp</dimen>
+    <dimen name="stopActionIconStartMargin">20dp</dimen>
+    <dimen name="stopActionIconTopMargin">20dp</dimen>
+    <dimen name="stopActionIconBottomMargin">20dp</dimen>
+
+    <dimen name="stopTitleWidth">150dp</dimen>
+    <dimen name="stopTitleTopMargin">42dp</dimen>
+    <dimen name="stopTitleBottomMargin">42dp</dimen>
+    <dimen name="stopTitleStartMargin">10dp</dimen>
+
+    <dimen name="stopAddress1TopMargin">10dp</dimen>
+    <dimen name="stopAddress1EndMargin">35dp</dimen>
+
+    <dimen name="stopAddress2EndMargin">35dp</dimen>
+
+    <dimen name="dotTopMargin">0dp</dimen>
+    <dimen name="completedTimeTopMargin">15dp</dimen>
+    <dimen name="arrowIconTopMargin">50dp</dimen>
+    <dimen name="arrowIconEndMargin">20dp</dimen>
+    <dimen name="arrowIconBottomMargin">50dp</dimen>
+
+    <dimen name="startTripButtonMarginLeft">24dp</dimen>
+    <dimen name="startTripButtonMarginRight">32dp</dimen>
+    <dimen name="startTripButtonMarginVertical">16dp</dimen>
+    <dimen name="startTripButtonPaddingHorizontal">24dp</dimen>
+    <dimen name="startTripButtonPaddingVertical">8dp</dimen>
+    <dimen name="startTripButtonMinWidth">0dp</dimen>
+    <dimen name="stopListPreviewLabelMarginLeft">16dp</dimen>
+    <dimen name="stopListPreviewLabelMarginRight">32dp</dimen>
+    <dimen name="stopDetailPreviewLabelMarginTop">20dp</dimen>
+    <dimen name="stopDetailPreviewLabelMarginBottom">10dp</dimen>
+
+    <dimen name="tripPreviewStartMargin">55dp</dimen>
+    <dimen name="tripListRecyclerViewTopMargin">120dp</dimen>
+    <dimen name="tripPreviewTextTopMargin">40dp</dimen>
+
+    <dimen name="tripPreviewBottomSheetPaddingBottom">15dp</dimen>
+    <dimen name="tripPreviewBottomSheetButtonSize">30dp</dimen>
+    <dimen name="stopDetailArrowSize">24dp</dimen>
+
+    <dimen name="previousSize">48dp</dimen>
+    <dimen name="nextSize">48dp</dimen>
+    <dimen name="timelineStopTitleWidth">200dp</dimen>
+
+
+    <dimen name="defaultLeftRightMargin">5dp</dimen>
+    <dimen name="defaultTopBottomMargin">8dp</dimen>
+    <dimen name="defaultFormsEditTextPadding">15dp</dimen>
+    <dimen name="defaultFormsEditTextHeight">60dp</dimen>
+    <dimen name="boxCornerRadius">2dp</dimen>
+    <dimen name="signatureButtonTextSize">12sp</dimen>
+    <dimen name="stopPopupIconWidth">50dp</dimen>
+    <dimen name="dialogTitleSize">16sp</dimen>
+    <dimen name="dateTimeScrollMargin">5dp</dimen>
+    <dimen name="dateTimePickerGap">20dp</dimen>
+    <dimen name="datePickerMargin">5dp</dimen>
+    <dimen name="timePickerMargin">5dp</dimen>
+    <dimen name="signature_canvas_view_height">300dp</dimen>
+    <dimen name="signature_title_size">30sp</dimen>
+    <dimen name="padding_size_5">5dp</dimen>
+    <dimen name="padding_size_10">10dp</dimen>
+    <dimen name="margin_size_15">15dp</dimen>
+    <dimen name="padding_size_20">20dp</dimen>
+    <dimen name="defaultToolBarSize">60dp</dimen>
+    <dimen name="cancel_action_button_size">24dp</dimen>
+    <dimen name="dispatchListRowPadding">16dp</dimen>
+    <dimen name="stopListRowPadding">16dp</dimen>
+    <dimen name="dispatchIdTextSize">16sp</dimen>
+    <dimen name="dispatchNameTextSize">16sp</dimen>
+    <dimen name="dispatchDescriptionTextSize">14sp</dimen>
+    <dimen name="timeLineStopDetailETATextSize">14sp</dimen>
+    <dimen name="bar_code_content_view">20sp</dimen>
+    <dimen name="formListRowPadding">16dp</dimen>
+    <dimen name="stop_list_completion_time_label_size">16sp</dimen>
+    <dimen name="stop_list_completion_time_text_size">20sp</dimen>
+
+    <!--AppWidget-->
+    <dimen name="widget_padding">0dp</dimen>
+    <dimen name="appIconTopMargin">19dp</dimen>
+    <dimen name="appIconStartMargin">15dp</dimen>
+    <dimen name="appWidgetIconSize">32dp</dimen>
+    <dimen name="appWidgetTitleSize">16sp</dimen>
+    <dimen name="appWidgetTitleStartMargin">10dp</dimen>
+    <dimen name="appWidgetTitleTopMargin">22dp</dimen>
+    <dimen name="appWidgetTotalMilesTextSize">24sp</dimen>
+    <dimen name="appWidgetTotalMilesStartMargin">15dp</dimen>
+    <dimen name="appWidgetTotalMilesTopMargin">25dp</dimen>
+    <dimen name="appWidgetBottomTitleTextSize">18sp</dimen>
+    <dimen name="appWidgetBottomTitleMargin">15dp</dimen>
+    <dimen name="appWidgetHourTextSize">18sp</dimen>
+    <dimen name="appWidgetTripHoursTopMargin">5dp</dimen>
+    <dimen name="appWidgetTripHoursStartMargin">15dp</dimen>
+    <dimen name="appWidgetTotalStopsTopMargin">1dp</dimen>
+    <dimen name="checkmarkBreakMargin">35dp</dimen>
+    <dimen name="appWidgetParentLayoutWidth">250dp</dimen>
+    <dimen name="appWidgetParentLayoutHeight">390dp</dimen>
+    <dimen name="appWidgetParentLayoutWidthPortrait">390dp</dimen>
+    <dimen name="appWidgetParentLayoutHeightPortrait">250dp</dimen>
+    <dimen name="appWidgetIconLayoutWidth">60dp</dimen>
+    <dimen name="appWidgetIconLayoutHeight">60dp</dimen>
+    <dimen name="appWidgetBorderMargin">8dp</dimen>
+    <dimen name="appWidgetTitleLayoutWidth">311dp</dimen>
+    <dimen name="appWidgetTitleLayoutHeight">60dp</dimen>
+    <dimen name="appWidgetTitleLayoutMarginStart">3dp</dimen>
+    <dimen name="appWidgetButtonLayoutWidth">374dp</dimen>
+    <dimen name="appWidgetButtonLayoutHeight">60dp</dimen>
+    <dimen name="appWidgetButtonWidth">202dp</dimen>
+    <dimen name="appWidgetButtonHeight">44dp</dimen>
+
+    <!--
+Refer to App Widget Documentation for margin information
+http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+    -->
+    <dimen name="widget_margin">0dp</dimen>
+
+</resources>

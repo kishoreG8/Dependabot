@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.HomeFragment">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/tabLayoutHeight"
+                    android:layout_weight="1"
+                    app:tabGravity="start"
+                    android:background="@color/colorPrimary"
+                    app:tabIndicatorColor="@color/tabIndicator"
+                    app:tabIndicatorHeight="@dimen/tabIndicatorHeight"
+                    app:tabMode="scrollable"
+                    app:tabTextAppearance="@style/CustomTabText"
+                    app:tabTextColor="@color/color_white" />
+
+                <TextView
+                    android:id="@+id/previewOnlyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/stopListPreviewLabelMarginLeft"
+                    android:layout_marginEnd="@dimen/stopListPreviewLabelMarginRight"
+                    android:layout_weight="0"
+                    android:gravity="center_vertical"
+                    android:text="@string/previewOnly"
+                    android:textAppearance="@style/CustomTabText"
+                    android:textColor="@color/tabIndicator"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/startTripButton"
+                    style="@style/CustomTabText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/startTripButtonMarginLeft"
+                    android:layout_marginTop="@dimen/startTripButtonMarginVertical"
+                    android:layout_marginEnd="@dimen/startTripButtonMarginRight"
+                    android:layout_marginBottom="@dimen/startTripButtonMarginVertical"
+                    android:layout_weight="0"
+                    android:background="@drawable/round_corner_no_border"
+                    android:minWidth="@dimen/startTripButtonMinWidth"
+                    android:paddingStart="@dimen/startTripButtonPaddingHorizontal"
+                    android:paddingTop="@dimen/startTripButtonPaddingVertical"
+                    android:paddingEnd="@dimen/startTripButtonPaddingHorizontal"
+                    android:paddingBottom="@dimen/startTripButtonPaddingVertical"
+                    android:text="@string/startTrip"
+                    android:textColor="@color/textColor"
+                    android:visibility="gone"
+                     />
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appBarLayout" />
+
+        <!--TODO hack to fix black artifact when tapping tabs-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent" />
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

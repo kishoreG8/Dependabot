@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workflow_events_communication_foreground_service_channel_name">Workflow Events Communication Foreground Service</string>
+    <string name="workflow_events_communication_notification_content_text">Workflow Events Communication</string>
+</resources>

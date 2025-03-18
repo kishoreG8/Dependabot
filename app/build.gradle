@@ -1,0 +1,267 @@
+ext.artifactBaseName = 'route-manifest'
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.jfrog.artifactory'
+apply plugin: 'maven-publish'
+// Performance Monitoring plugin
+apply plugin: 'com.google.firebase.firebase-perf'
+// Firebase Crashlytics plugin.
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'kotlin-parcelize'
+// Infrastructure Gradle plugin.
+apply plugin: 'ttm-mep-gitflow-version-plugin'
+apply plugin: 'ttm-mep-artifactory-plugin'
+apply plugin: 'ttm-jacoco-android-plugin'
+apply plugin: 'com.github.triplet.play'
+
+jacoco {
+    toolVersion '0.8.12'
+}
+
+coverageConfig {
+    variant 'stgDebug'
+    packages = ['com.trimble.ttm.routemanifest']
+}
+
+rootProject.tasks['sonarqube'].dependsOn "${name}:test${coverageConfig.variant.capitalize()}UnitTest"
+
+def isMinifyEnabled =  !(gradle.startParameter.taskNames.any {
+    it.contains("connected") &&  it.contains("AndroidTest")
+})
+
+println("Minify Enabled "+isMinifyEnabled)
+
+
+android {
+    lint {
+        baseline = file("lint_baseline.xml")
+    }
+    compileSdk compile_sdk_version
+    defaultConfig {
+        applicationId "com.trimble.ttm.routemanifest"
+        minSdk min_sdk_version
+        targetSdk target_sdk_version
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+        compose = true
+    }
+
+    signingConfigs {
+        stg {
+            storeFile file('formsworkflow_keystore-stg.jks')
+            storePassword System.getenv('routemanifest_storepwd_stg')
+            keyAlias 'formsworkflow-stg'
+            keyPassword System.getenv('routemanifest_keypwd_stg')
+        }
+        prod {
+            storeFile file('formsworkflow_keystore-prod.jks')
+            storePassword System.getenv('routemanifest_storepwd_prod')
+            keyAlias 'formsworkflow-prod'
+            keyPassword System.getenv('routemanifest_keypwd_prod')
+        }
+    }
+
+    flavorDimensions += "environment"
+    productFlavors {
+        stg {
+            applicationId "com.trimble.ttm.routemanifest.stg"
+            dimension "environment"
+            signingConfig signingConfigs.stg
+        }
+
+        prod {
+            applicationId "com.trimble.ttm.routemanifest"
+            dimension "environment"
+            signingConfig signingConfigs.prod
+        }
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ""
+        }
+        release {
+            applicationIdSuffix ""
+            testBuildType = "release"
+            minifyEnabled isMinifyEnabled
+            shrinkResources isMinifyEnabled
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig null
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+
+    kotlinOptions {
+        freeCompilerArgs += ["-Xuse-experimental=kotlinx.coroutines.ExperimentalCoroutinesApi",
+                             "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
+                             "-opt-in=kotlin.RequiresOptIn",
+                             "-Xjvm-default=all"]
+        jvmTarget = "17"
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion compose_kotlin_compiler_version
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            returnDefaultValues=true
+        }
+        packagingOptions {
+            jniLibs {
+                useLegacyPackaging true
+            }
+        }
+    }
+
+//running tests only for dev environment as the code base is same across environments
+
+    tasks.configureEach { task ->
+        if (task.name.contains("testStgReleaseUnitTest") || task.name.contains("testProdDebugUnitTest") ||
+                task.name.contains("testProdReleaseUnitTest")) {
+            task.enabled = false
+        }
+    }
+
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+        //Core Libraries
+        implementation "androidx.appcompat:appcompat:$appcompat_version"
+        implementation "androidx.core:core-ktx:$core_ktx_version"
+        implementation "androidx.legacy:legacy-support-v4:$legacy_support_v4_version"
+        implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
+        implementation "androidx.fragment:fragment-ktx:$fragment_version"
+        implementation "androidx.activity:activity-ktx:$activity_version"
+        implementation(project(":formLibrary"))
+
+        //Material Library
+        implementation "com.google.android.material:material:$material_version"
+
+        //Jetpack Navigation
+        implementation "androidx.navigation:navigation-fragment-ktx:$navigation_component_version"
+        implementation "androidx.navigation:navigation-ui-ktx:$navigation_component_version"
+        //Jetpack Lifecycle
+        implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version_extension"
+        implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+        implementation "androidx.lifecycle:lifecycle-reactivestreams-ktx:$lifecycle_version"
+
+        //App Updates
+        implementation "com.google.android.play:app-update:$play_app_update_version"
+        implementation "com.google.android.play:app-update-ktx:$play_app_update_version"
+
+        //Coroutines
+        implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+        implementation "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$coroutines_version"
+
+        //Retrofit
+        implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+        implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+
+        //Google Firebase Libraries
+        implementation platform("com.google.firebase:firebase-bom:$firbase_bom_version")
+        implementation 'com.google.firebase:firebase-firestore' //Firestore database
+        implementation 'com.google.firebase:firebase-functions' //Functions
+        implementation 'com.google.firebase:firebase-auth' //Authentication
+        implementation 'com.google.firebase:firebase-perf' //Performance Monitoring
+        implementation 'com.google.firebase:firebase-crashlytics' //Crashlytics
+        implementation 'com.google.firebase:firebase-messaging' //FCM
+        implementation 'com.google.firebase:firebase-appcheck-debug'
+        implementation 'com.google.firebase:firebase-appcheck-playintegrity'
+        implementation 'com.google.firebase:firebase-storage'
+
+
+        //Dependency Injection Libraries
+        implementation "io.insert-koin:koin-android:$koin_version"
+
+        //Trimble Libraries
+        implementation "com.trimble:maine-custom-toolbar:$maine_toolbar_version"
+        implementation "com.trimble:launchercommunicationlib:$launchercommunication_lib_version"
+        implementation "com.trimble:launchercommunicationcommons:$launchercommunication_lib_version"
+        implementation "com.trimble:ttm-mep-backbone-api:$backbone_api_version"
+        implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_ktx_version"
+
+        //DataStore
+        implementation("androidx.datastore:datastore-preferences:$datastore_version")
+
+        //memory leak finder
+//        debugImplementation "com.squareup.leakcanary:leakcanary-android:$leak_canary_version"
+
+        //maps library
+        implementation("com.google.maps.android:android-maps-utils:$maps_utils_version")
+        implementation "androidx.activity:activity:$activity_version"
+
+        //work manager
+        implementation "androidx.work:work-runtime-ktx:$work_manager_runtime"
+
+        //Baseline Profile library
+        implementation("androidx.profileinstaller:profileinstaller:$baseline_profileinstaller_version")
+
+        debugImplementation "com.google.truth:truth:$truth_version"
+
+        implementation project(':formLibrary')
+        //Compose Libraries
+        implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.8.7'
+        implementation "androidx.activity:activity-compose"
+        implementation platform("androidx.compose:compose-bom:$compose_bom_version")
+        implementation 'androidx.compose.ui:ui'
+        implementation 'androidx.compose.ui:ui-graphics'
+        implementation 'androidx.compose.ui:ui-tooling-preview'
+        implementation 'androidx.compose.material3:material3'
+        debugImplementation 'androidx.compose.ui:ui-tooling'
+        debugImplementation 'androidx.compose.ui:ui-test-manifest'
+
+
+        //Testing Libraries
+        testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
+        testImplementation "org.junit.jupiter:junit-jupiter-api:$junit_jupiter_version"
+        testImplementation "io.mockk:mockk:$mockk_version"
+        testImplementation "io.insert-koin:koin-test:$koin_version"
+        testImplementation "androidx.arch.core:core-testing:$core_testing_version"
+        testImplementation "org.robolectric:robolectric:$robolectricVersion"
+        androidTestImplementation "io.insert-koin:koin-test:$koin_version"
+        androidTestImplementation "androidx.test.ext:junit:$ui_test_junit_assertion_version"
+        androidTestImplementation "androidx.test:rules:$ui_test_rules"
+        androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+        androidTestImplementation("androidx.test.espresso:espresso-contrib:$espresso_version") {
+            exclude module: "protobuf-lite"
+            exclude module: "checker"
+        }
+        androidTestImplementation "io.mockk:mockk-android:$mockk_version"
+        androidTestImplementation "org.hamcrest:hamcrest:$hamcrest_test_lib_version"
+        androidTestImplementation "androidx.test.uiautomator:uiautomator:$ui_automator_version"
+        androidTestImplementation "androidx.work:work-testing:$work_manager_runtime"
+        androidTestImplementation platform("androidx.compose:compose-bom:$compose_bom_version")
+        androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
+    }
+    lint {
+        abortOnError false
+    }
+    namespace 'com.trimble.ttm.routemanifest'
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+        resources.excludes.add("META-INF/*")
+    }
+}
+
+play {
+    track.set("Integration")
+    defaultToAppBundles.set(true)
+    artifactDir.set(file("build/outputs/bundle/prodRelease"))
+}

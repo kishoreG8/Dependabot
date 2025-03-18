@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.trimble.ttm.routemanifest.customComparator.LauncherMessagePriorityComparator</OriginalElement>
+  <nodes>
+    <node x="0.0" y="89.0">com.trimble.ttm.routemanifest.usecases.RemoveExpiredTripPanelMessageUseCase</node>
+    <node x="0.0" y="163.0">com.trimble.ttm.routemanifest.customComparator.LauncherMessagePriorityComparator</node>
+    <node x="349.0" y="89.0">com.trimble.ttm.routemanifest.ui.activities.DispatchBaseActivity</node>
+    <node x="359.5" y="0.0">com.trimble.ttm.routemanifest.usecases.TripPanelUseCase</node>
+    <node x="557.0" y="89.0">com.trimble.ttm.routemanifest.service.RouteManifestForegroundService</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.trimble.ttm.routemanifest.usecases.RemoveExpiredTripPanelMessageUseCase" target="com.trimble.ttm.routemanifest.usecases.TripPanelUseCase" relationship="TO_ONE">
+      <point x="-82.25" y="-14.5" />
+      <point x="82.25" y="69.0" />
+      <point x="438.0" y="69.0" />
+      <point x="438.0" y="49.0" />
+      <point x="401.25" y="49.0" />
+      <point x="-41.75" y="14.5" />
+    </edge>
+    <edge source="com.trimble.ttm.routemanifest.usecases.RemoveExpiredTripPanelMessageUseCase" target="com.trimble.ttm.routemanifest.usecases.TripPanelUseCase" relationship="DEPENDENCY">
+      <point x="82.25" y="-14.5" />
+      <point x="246.75" y="59.0" />
+      <point x="448.0" y="59.0" />
+      <point x="448.0" y="49.0" />
+      <point x="484.75" y="49.0" />
+      <point x="41.75" y="14.5" />
+    </edge>
+    <edge source="com.trimble.ttm.routemanifest.service.RouteManifestForegroundService" target="com.trimble.ttm.routemanifest.usecases.TripPanelUseCase" relationship="TO_ONE">
+      <point x="-67.5" y="-14.5" />
+      <point x="624.5" y="69.0" />
+      <point x="438.0" y="69.0" />
+      <point x="438.0" y="49.0" />
+      <point x="401.25" y="49.0" />
+      <point x="-41.75" y="14.5" />
+    </edge>
+    <edge source="com.trimble.ttm.routemanifest.ui.activities.DispatchBaseActivity" target="com.trimble.ttm.routemanifest.usecases.TripPanelUseCase" relationship="DEPENDENCY">
+      <point x="47.0" y="-14.5" />
+      <point x="490.0" y="59.0" />
+      <point x="448.0" y="59.0" />
+      <point x="448.0" y="49.0" />
+      <point x="484.75" y="49.0" />
+      <point x="41.75" y="14.5" />
+    </edge>
+    <edge source="com.trimble.ttm.routemanifest.ui.activities.DispatchBaseActivity" target="com.trimble.ttm.routemanifest.usecases.TripPanelUseCase" relationship="TO_ONE">
+      <point x="-47.0" y="-14.5" />
+      <point x="396.0" y="69.0" />
+      <point x="438.0" y="69.0" />
+      <point x="438.0" y="49.0" />
+      <point x="401.25" y="49.0" />
+      <point x="-41.75" y="14.5" />
+    </edge>
+    <edge source="com.trimble.ttm.routemanifest.service.RouteManifestForegroundService" target="com.trimble.ttm.routemanifest.usecases.TripPanelUseCase" relationship="DEPENDENCY">
+      <point x="67.5" y="-14.5" />
+      <point x="759.5" y="59.0" />
+      <point x="448.0" y="59.0" />
+      <point x="448.0" y="49.0" />
+      <point x="484.75" y="49.0" />
+      <point x="41.75" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="413.5" y="96.0" />
+  <SelectedNodes>
+    <node>com.trimble.ttm.routemanifest.customComparator.LauncherMessagePriorityComparator</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

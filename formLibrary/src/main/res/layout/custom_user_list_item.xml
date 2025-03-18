@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.trimble.ttm.formlibrary.model.User" />
+
+        <variable
+            name="userItemClickListener"
+            type="com.trimble.ttm.formlibrary.listeners.IUserItemClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="@{() -> userItemClickListener.onUserItemClicked(user)}"
+        android:padding="@dimen/userListRowPadding">
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
+            android:paddingStart="@dimen/padding_size_10"
+            android:paddingEnd="@dimen/padding_size_10"
+            android:text="@{user.Username}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/largeTextSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/selectBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Trimble User" />
+
+        <CheckBox
+            android:id="@+id/selectBox"
+            android:buttonTint="@android:color/white"
+            android:layout_width="@dimen/checkBoxSize"
+            android:layout_height="@dimen/checkBoxSize"
+            android:contentDescription="@string/arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.1"
+            tools:checked="true" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

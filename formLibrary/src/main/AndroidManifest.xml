@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+
+    <queries>
+        <package android:name="com.trimble.ttm.backbone.api" />
+        <package android:name="com.trimble.ttm.toolbar" />
+        <package android:name="com.trimble.ttm.instinct.core.services" />
+        <package android:name="com.trimble.ttm.instinct.core.services.private" />
+        <package android:name="com.trimble.launchercommunicationlib" />
+    </queries>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="http" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
+    </queries>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- Compliant -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application>
+        <activity
+            android:name=".ui.activities.FormLibraryActivity"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:exported="true"
+            android:icon="@mipmap/ic_forms_shortcut"
+            android:label="@string/menu_form_library"
+            android:launchMode="singleInstance"
+            android:taskAffinity="com.trimble.ttm.formlibrary.ui.activities.FormLibraryActivity"
+            android:theme="@style/Theme.MaineFormsWorkflowApp"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".service.CustomWorkFlowEventForegroundService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="shortService"
+            android:permission="android.permission.FOREGROUND_SERVICE">
+            <intent-filter>
+                <action android:name="CustomWorkFlowEventForegroundService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".ui.activities.MessagingActivity"
+            android:exported="true"
+            android:icon="@mipmap/ic_inbox_shortcut"
+            android:label="@string/menu_inbox"
+            android:launchMode="singleInstance"
+            android:taskAffinity="com.trimble.ttm.formlibrary.ui.activities.MessagingActivity"
+            android:theme="@style/AppTheme.ActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.PreviewImageActivity"
+            android:exported="false"
+            android:taskAffinity="com.trimble.ttm.formlibrary.ui.activities.PreviewImageActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activities.ImportImageUriActivity"
+            android:configChanges="mcc|mnc|locale|keyboard|keyboardHidden|orientation|screenSize|fontScale|uiMode"
+            android:exported="false"
+            android:taskAffinity="com.trimble.ttm.formlibrary.ui.activities.ImportImageUriActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
+        <activity
+            android:name=".ui.activities.ContactListActivity"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activities.FormLibraryFormActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.trimble.ttm.formlibrary.ui.activities.FormLibraryFormActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.activities.EDVIRInspectionsActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.activities.ManualInspectionFormActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.activities.EDVIRFormActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.trimble.ttm.formlibrary.affinity.mandatory_edvir"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.trimble.ttm.formsandworkflow.EDVIR_INSPECTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.trimble.ttm.formlibrary.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <provider
+            android:name=".dataLayer.MandatoryEDVIRDataProvider"
+            android:authorities="com.trimble.ttm.formlibrary.edvirprovider"
+            android:exported="true"
+            android:permission="@string/data_expose_permission" />
+    </application>
+
+</manifest>
