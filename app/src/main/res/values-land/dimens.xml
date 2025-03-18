@@ -1,0 +1,75 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="toolbarHeight">90dp</dimen>
+
+    <dimen name="tabIndicatorHeight">4dp</dimen>
+    <dimen name="tabLayoutHeight">60dp</dimen>
+    <dimen name="pagerPadding">35dp</dimen>
+    <dimen name="separatorHeight">2dp</dimen>
+    <dimen name="marginFromTabIndicator">16dp</dimen>
+    <dimen name="distanceTextSize">25sp</dimen>
+    <dimen name="stopInfoTextSize">26sp</dimen>
+    <dimen name="addressTextSize">20sp</dimen>
+    <dimen name="tabTextSize">20sp</dimen>
+
+    <dimen name="largestTextSize">28sp</dimen>
+    <dimen name="largeTextSize">26sp</dimen>
+    <dimen name="mediumTextSize">24sp</dimen>
+    <dimen name="smallTextSize">22sp</dimen>
+    <dimen name="smallestTextSize">20sp</dimen>
+
+    <dimen name="recyclerCardHeight">90dp</dimen>
+    <dimen name="recyclerLayoutStartPadding">15dp</dimen>
+    <dimen name="recyclerSeparatorHeight">1dp</dimen>
+
+    <dimen name="distanceTextTopMargin">42dp</dimen>
+    <dimen name="distanceTextBottomMargin">43dp</dimen>
+    <dimen name="totalMilesStartMargin">16dp</dimen>
+    <dimen name="totalStopsStartMargin">5dp</dimen>
+
+    <dimen name="recyclerArrowIconSize">30dp</dimen>
+    <dimen name="navigateIconSize">30dp</dimen>
+    <dimen name="stopActionSize">30dp</dimen>
+    <dimen name="stopActionIconStartMargin">20dp</dimen>
+    <dimen name="stopActionIconTopMargin">30dp</dimen>
+    <dimen name="stopActionIconBottomMargin">44dp</dimen>
+
+    <dimen name="stopTitleWidth">300dp</dimen>
+    <dimen name="stopTitleTopMargin">42dp</dimen>
+    <dimen name="stopTitleBottomMargin">42dp</dimen>
+    <dimen name="stopTitleStartMargin">20dp</dimen>
+
+    <dimen name="stopAddress1TopMargin">15dp</dimen>
+    <dimen name="stopAddress1EndMargin">35dp</dimen>
+
+    <dimen name="stopAddress2EndMargin">35dp</dimen>
+
+    <dimen name="arrowIconTopMargin">50dp</dimen>
+    <dimen name="arrowIconEndMargin">20dp</dimen>
+    <dimen name="arrowIconBottomMargin">50dp</dimen>
+
+    <dimen name="tripPreviewStartMargin">215dp</dimen>
+    <dimen name="tripListRecyclerViewTopMargin">130dp</dimen>
+    <dimen name="tripPreviewTextTopMargin">20dp</dimen>
+
+    <dimen name="dispatchListRowPadding">24dp</dimen>
+    <dimen name="stopListRowPadding">24dp</dimen>
+    <dimen name="dispatchIdTextSize">24sp</dimen>
+    <dimen name="dispatchNameTextSize">24sp</dimen>
+    <dimen name="dispatchDescriptionTextSize">20sp</dimen>
+    <dimen name="timeLineStopDetailETATextSize">18sp</dimen>
+    <dimen name="formListRowPadding">24dp</dimen>
+    <dimen name="stop_list_completion_time_label_size">18sp</dimen>
+    <dimen name="stop_list_completion_time_text_size">24sp</dimen>
+
+    <!--AppWidget-->
+    <dimen name="appIconTopMargin">19dp</dimen>
+    <dimen name="appIconStartMargin">23dp</dimen>
+    <dimen name="appWidgetTotalMilesTextSize">24sp</dimen>
+    <dimen name="appWidgetTotalMilesStartMargin">18dp</dimen>
+    <dimen name="appWidgetTripHoursTopMargin">6dp</dimen>
+    <dimen name="appWidgetTripHoursStartMargin">18dp</dimen>
+    <dimen name="appWidgetBottomTitleMargin">23dp</dimen>
+    <dimen name="appWidgetHourTextSize">18sp</dimen>
+
+</resources>

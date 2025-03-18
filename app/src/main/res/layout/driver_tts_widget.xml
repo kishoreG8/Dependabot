@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ttsWidget"
+    android:layout_width="@dimen/playerWidgetWidth"
+    android:layout_height="@dimen/playerWidgetHeight"
+    android:background="@color/widgetBackgroundPrimary"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/ttsWidgetInnerRectangle"
+        android:layout_width="@dimen/playerWidgetInnerRectangleWidth"
+        android:layout_height="match_parent"
+        android:background="@color/widgetBackgroundSecondary"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/playerWidgetButtonMargin">
+
+        <TextView
+            android:id="@+id/playerWidgetMessageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/playerWidgetTextTopMargin"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/playerWidgetMessageCountSize"
+            tools:text="Message 1 of 8"
+            android:text="@string/ttsWidgetNoNewMessages"/>
+
+        <RelativeLayout
+            android:id="@+id/playerWidgetButtonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+           <ImageButton
+                android:id="@+id/playerWidgetPreviousButton"
+                android:layout_width="@dimen/playerWidgetPreviousButtonWidth"
+                android:layout_height="@dimen/playerWidgetPreviousButtonHeight"
+                android:background="@drawable/tts_widget_button_ripple"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_skip_prev"
+                android:contentDescription="@string/ttsWidgetPreviousDescription"/>
+
+            <ImageButton
+                android:id="@+id/playerWidgetPreviousButtonOff"
+                android:layout_width="@dimen/playerWidgetPreviousButtonWidth"
+                android:layout_height="@dimen/playerWidgetPreviousButtonHeight"
+                android:background="@color/widgetBackgroundPrimary"
+                android:layout_alignParentStart="true"
+                android:clickable="false"
+                android:src="@drawable/ic_skip_prev_deactivated"
+                android:contentDescription="@string/ttsWidgetPreviousDeactivatedDescription"/>
+
+            <ImageButton
+                android:id="@+id/playerWidgetPauseButton"
+                android:layout_width="@dimen/playerWidgetPlayButtonWidth"
+                android:layout_height="@dimen/playerWidgetPreviousButtonHeight"
+                android:background="@drawable/tts_widget_button_ripple"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_pause"
+                android:contentDescription="@string/ttsWidgetPauseDescription" />
+
+            <ImageButton
+                android:id="@+id/playerWidgetStopButton"
+                android:layout_width="@dimen/playerWidgetPlayButtonWidth"
+                android:layout_height="@dimen/playerWidgetPreviousButtonHeight"
+                android:background="@drawable/tts_widget_button_ripple"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_player_stop"
+                android:contentDescription="@string/ttsWidgetStopDescription" />
+
+            <ImageButton
+                android:id="@+id/playerWidgetReplayButton"
+                android:layout_width="@dimen/playerWidgetPlayButtonWidth"
+                android:layout_height="@dimen/playerWidgetPreviousButtonHeight"
+                android:background="@drawable/tts_widget_button_ripple"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:src="@drawable/ic_replay"
+                android:contentDescription="@string/ttsWidgetReplayDescription"/>
+
+            <ImageButton
+                android:id="@+id/playerWidgetPlayButton"
+                android:layout_width="@dimen/playerWidgetPlayButtonWidth"
+                android:layout_height="@dimen/playerWidgetPreviousButtonHeight"
+                android:background="@drawable/tts_widget_button_ripple"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_play"
+                android:contentDescription="@string/ttsWidgetPlayDescription"/>
+
+            <ImageButton
+                android:id="@+id/playerWidgetPlayButtonOff"
+                android:layout_width="@dimen/playerWidgetPlayButtonWidth"
+                android:layout_height="@dimen/playerWidgetPreviousButtonHeight"
+                android:layout_centerInParent="true"
+                android:background="@color/widgetBackgroundPrimary"
+                android:clickable="false"
+                android:contentDescription="@string/ttsWidgetPlayDeactivatedDescription"
+                android:src="@drawable/ic_play_deactivated" />
+
+             <ImageButton
+                 android:id="@+id/playerWidgetNextButton"
+                 android:layout_width="@dimen/playerWidgetNextButtonWidth"
+                 android:layout_height="@dimen/playerWidgetPreviousButtonHeight"
+                 android:background="@drawable/tts_widget_button_ripple"
+                 android:layout_alignParentEnd="true"
+                 android:src="@drawable/ic_skip_next"
+                 android:contentDescription="@string/ttsWidgetNextDescription"/>
+
+             <ImageButton
+                 android:id="@+id/playerWidgetNextButtonOff"
+                 android:layout_width="@dimen/playerWidgetNextButtonWidth"
+                 android:layout_height="@dimen/playerWidgetPreviousButtonHeight"
+                 android:background="@color/widgetBackgroundPrimary"
+                 android:layout_alignParentEnd="true"
+                 android:clickable="false"
+                 android:src="@drawable/ic_skip_next_deactivated"
+                 android:contentDescription="@string/ttsWidgetNextDeactivatedDescription"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ttsWidgetInstinctIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/playerWidgetInstinctIconMargin"
+        android:src="@drawable/ic_instinct_messenger" />
+
+</RelativeLayout>

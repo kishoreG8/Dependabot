@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_widget_parent"
+    android:layout_width="@dimen/appWidgetParentLayoutWidthPortrait"
+    android:layout_height="@dimen/appWidgetParentLayoutHeightPortrait"
+    android:background="@drawable/layout_background">
+
+    <LinearLayout
+        android:id="@+id/iconLayout"
+        android:layout_width="@dimen/appWidgetIconLayoutWidth"
+        android:layout_height="@dimen/appWidgetIconLayoutHeight"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/appWidgetBorderMargin"
+        android:layout_marginTop="@dimen/appWidgetBorderMargin"
+        android:background="@color/widgetBackgroundPrimary"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/appIcon"
+            android:layout_width="@dimen/appWidgetIconSize"
+            android:layout_height="@dimen/appWidgetIconSize"
+            android:contentDescription="@string/appIcon"
+            android:src="@mipmap/ic_app_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="@dimen/appWidgetTitleLayoutWidth"
+        android:layout_height="@dimen/appWidgetTitleLayoutHeight"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/appWidgetTitleLayoutMarginStart"
+        android:layout_marginTop="@dimen/appWidgetBorderMargin"
+        android:layout_toEndOf="@id/iconLayout"
+        android:background="@color/widgetBackgroundPrimary"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:maxLines="2"
+            android:text="@string/widget_title_todays_route"
+            android:textColor="@color/widgetTitleColor"
+            android:textSize="@dimen/appWidgetTitleSize"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/status_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/appWidgetTripHoursStartMargin"
+        android:layout_marginTop="@dimen/appWidgetTripHoursTopMargin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_total_miles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/na"
+            android:textAlignment="center"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/appWidgetTotalMilesTextSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/widgetHoursText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/na"
+            android:textAlignment="center"
+            android:textColor="@color/widgetTextColor"
+            android:textSize="@dimen/appWidgetHourTextSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/widgetNoOfStopsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/na"
+            android:textAlignment="center"
+            android:textColor="@color/widgetTextColor"
+            android:textSize="@dimen/appWidgetHourTextSize"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="@dimen/appWidgetButtonLayoutWidth"
+        android:layout_height="@dimen/appWidgetButtonLayoutHeight"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/appWidgetBorderMargin"
+        android:layout_marginBottom="@dimen/appWidgetBorderMargin"
+        android:background="@color/widgetBackgroundPrimary"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/appWidgetButton"
+            android:layout_width="@dimen/appWidgetButtonWidth"
+            android:layout_height="@dimen/appWidgetButtonHeight"
+            android:background="@drawable/widget_button"
+            android:gravity="center"
+            android:text="@string/widget_view_route"
+            android:textAllCaps="false"
+            android:textColor="@color/spinnerTextColor"
+            android:textSize="@dimen/appWidgetBottomTitleTextSize"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

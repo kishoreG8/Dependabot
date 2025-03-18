@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar.Bridge">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="AppTheme.ActionBar">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+        <item name="android:windowBackground">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="AppTheme.WhiteTextColor">
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="CustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/tabTextSize</item>
+    </style>
+
+    <style name="dialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/dialogBackground</item>
+    </style>
+
+    <style name="formDialogTheme" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/dialogBackground</item>
+    </style>
+
+    <style name="OutlineboxTheme">
+        <item name="boxStrokeColor">@color/text_input_border_color</item>
+    </style>
+
+    <style name="RequiredFieldOutlineBoxTheme">
+        <item name="boxStrokeColor">@color/required_fields_text_input_border</item>
+    </style>
+
+    <style name="OutlinedDropdown" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxStrokeColor">@color/text_input_border_color</item>
+        <item name="endIconTint">@color/defaultOutlineBoxBorderColor</item>
+    </style>
+
+    <style name="RequiredOutlinedDropdown" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxStrokeColor">@color/required_fields_text_input_border</item>
+        <item name="endIconTint">@color/defaultOutlineBoxBorderColor</item>
+    </style>
+
+    <style name="AccentProgressBar" parent="Widget.AppCompat.ProgressBar">
+        <item name="colorAccent">@color/progressBarColor</item>
+    </style>
+
+    <style name="MaineStyledButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="Theme.MaineFormsWorkflowApp" parent="AppTheme.NoActionBar" >
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+</resources>

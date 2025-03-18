@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.content.Context" />
+
+        <variable
+            name="stopDetail"
+            type="com.trimble.ttm.routemanifest.model.StopDetail" />
+
+        <variable
+            name="itemClickListener"
+            type="com.trimble.ttm.routemanifest.adapter.CustomClickListener" />
+
+        <variable
+            name="tripViewModel"
+            type="com.trimble.ttm.routemanifest.viewmodel.DispatchDetailViewModel" />
+
+        <variable
+            name="displayNavigate"
+            type="Boolean" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="@{() -> itemClickListener.cardClicked(stopDetail)}"
+        android:padding="@dimen/dispatchListRowPadding">
+
+        <RelativeLayout
+            android:id="@+id/stopActionLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_size_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.1">
+
+            <ImageView
+                android:id="@+id/stopAction"
+                setResource="@{tripViewModel.getResourceId(stopDetail.thisStopType)}"
+                android:layout_width="@dimen/stopActionSize"
+                android:layout_height="@dimen/stopActionSize"
+                android:background="@color/colorPrimary"
+                android:contentDescription="@string/action"
+
+                tools:src="@drawable/ic_find_in_page_black_24dp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/padding_size_10"
+            android:paddingStart="0dp"
+            app:layout_constraintStart_toEndOf="@+id/stopActionLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.45">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{stopDetail.name}"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/spinnerTextColor"
+                android:textSize="@dimen/dispatchIdTextSize"
+                tools:text="LA Z Boy - Drop Supplies ABC" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/this_stop_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/arrowLayout"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.3">
+
+            <TextView
+                android:id="@+id/stopAddressTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="@string/stop_address"
+                android:textColor="@color/stopCompletion_Display_Color"
+                android:textSize="@dimen/stop_list_completion_time_label_size"
+                android:visibility="gone"
+                tools:text="STOP ADDRESS" />
+
+            <TextView
+                android:id="@+id/stopAdress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:layout_below="@id/stopAddressTitle"
+                android:textColor="@color/spinnerTextColor"
+                android:textSize="@dimen/stop_list_completion_time_text_size"
+                android:visibility="gone"
+                tools:text="Address Line 1\nNeosho, MO 64850" />
+
+            <TextView
+                android:id="@+id/stopArrivedOn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="@string/stop_arrived_on"
+                android:textColor="@color/stopCompletion_Display_Color"
+                android:textSize="@dimen/stop_list_completion_time_label_size"
+                android:visibility="gone"
+                tools:text="Stop Arrived Time" />
+
+            <TextView
+                android:id="@+id/stopArrivedOnText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="3"
+                app:layout_constraintTop_toBottomOf="@+id/stopArrivedOn"
+                android:layout_below="@id/stopArrivedOn"
+                android:textColor="@color/white"
+                android:textSize="@dimen/stop_list_completion_time_text_size"
+                android:visibility="gone"
+                tools:text="Arrived Time" />
+
+            <TextView
+                android:id="@+id/stopDepartedOn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/stop_departed_on"
+                android:textColor="@color/stopCompletion_Display_Color"
+                android:textSize="@dimen/stop_list_completion_time_label_size"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/stopArrivedOnText"
+                android:layout_below="@+id/stopArrivedOnText"
+                tools:text="Stop Departed Time" />
+
+            <TextView
+                android:id="@+id/stopDepartedOnText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="3"
+                app:layout_constraintTop_toBottomOf="@+id/stopDepartedOn"
+                android:layout_below="@+id/stopDepartedOn"
+                android:textColor="@color/white"
+                android:textSize="@dimen/stop_list_completion_time_text_size"
+                android:visibility="gone"
+                tools:text="Departed Time" />
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/arrowLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/this_stop_info"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.15">
+
+            <ImageView
+                android:id="@+id/ivNavigate"
+                android:layout_width="@dimen/navigateIconSize"
+                android:layout_height="@dimen/navigateIconSize"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/navigate"
+                android:onClick="@{() -> tripViewModel.handleNavigateClicked(stopDetail, context)}"
+                android:src="@drawable/ic_navigation_white_24dp"
+                android:visibility="@{safeUnbox(tripViewModel.stopActionsAllowed &amp;&amp; displayNavigate) ? View.VISIBLE : View.INVISIBLE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/arrow"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.1" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="@dimen/recyclerArrowIconSize"
+                android:layout_height="@dimen/recyclerArrowIconSize"
+                android:contentDescription="@string/arrow"
+                android:src="@drawable/ic_arrow_forward_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

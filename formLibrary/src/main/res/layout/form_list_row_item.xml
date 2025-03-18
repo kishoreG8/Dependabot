@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="formDef"
+            type="com.trimble.ttm.commons.model.FormDef" />
+
+        <variable
+            name="formItemClickListener"
+            type="com.trimble.ttm.formlibrary.listeners.IFormClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="@{() -> formItemClickListener.onFormClicked(formDef)}"
+        android:padding="@dimen/formListRowPadding">
+
+        <TextView
+            android:id="@+id/tvFormName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
+            android:paddingStart="@dimen/padding_size_10"
+            android:paddingEnd="@dimen/padding_size_10"
+            android:text="@{formDef.name}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/largeTextSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Driver Feedback Form" />
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="@dimen/recyclerArrowIconSize"
+            android:layout_height="@dimen/recyclerArrowIconSize"
+            android:contentDescription="@string/arrow"
+            android:src="@drawable/ic_arrow_forward_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

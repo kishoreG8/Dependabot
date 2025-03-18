@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.activities.EDVIRInspectionsActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inspectionsRecylerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        tools:itemCount="4"
+        tools:listitem="@layout/inspection_row_item" />
+
+    <com.trimble.ttm.formlibrary.customViews.ProgressErrorView
+        android:id="@+id/progressErrViewInsp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.trimble.ttm.formlibrary.customViews.InspectionFloatingMenuView
+        android:id="@+id/inspectionMenuView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</RelativeLayout>

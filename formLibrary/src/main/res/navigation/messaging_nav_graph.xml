@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/message_nav_graph"
+    app:startDestination="@id/messageViewPagerContainerFragment">
+
+    <fragment
+        android:id="@+id/messageViewPagerContainerFragment"
+        android:name="com.trimble.ttm.formlibrary.ui.fragments.MessageViewPagerContainerFragment"
+        android:label="fragment_message_view_pager_container"
+        tools:layout="@layout/fragment_message_view_pager_container" >
+        <action
+            android:id="@+id/action_messageViewPagerContainerFragment_to_messageDetailFragment"
+            app:destination="@id/messageDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_messageViewPagerContainerFragment_to_vanillaMessagingFragment"
+            app:destination="@id/vanillaMessagingFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_messageViewPagerContainerFragment_to_messageReplyFragment"
+            app:destination="@id/messageReplyFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/messageDetailFragment"
+        android:name="com.trimble.ttm.formlibrary.ui.fragments.MessageDetailFragment"
+        android:label="fragment_message_detail"
+        tools:layout="@layout/fragment_message_detail" >
+        <action
+            android:id="@+id/action_messageDetailFragment_to_messageReplyFragment"
+            app:destination="@id/messageReplyFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageReplyFragment"
+        android:name="com.trimble.ttm.formlibrary.ui.fragments.MessageReplyFragment"
+        android:label="fragment_message_reply"
+        tools:layout="@layout/fragment_message_reply" >
+        <action
+            android:id="@+id/action_messageReplyFragment_to_messageViewPagerContainerFragment"
+            app:destination="@id/messageViewPagerContainerFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/messageViewPagerContainerFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_messageReplyFragment_to_messageDetailFragment"
+            app:destination="@id/messageDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/messageDetailFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/inboxFragment"
+        android:name="com.trimble.ttm.formlibrary.ui.fragments.InboxFragment"
+        android:label="fragment_inbox"
+        tools:layout="@layout/fragment_inbox" />
+    <fragment
+        android:id="@+id/vanillaMessagingFragment"
+        android:name="com.trimble.ttm.formlibrary.ui.fragments.FreeformMessagingFragment"
+        android:label="fragment_vanilla_messaging"
+        tools:layout="@layout/fragment_vanilla_messaging" >
+        <action
+            android:id="@+id/action_vanillaMessagingFragment_to_messageViewPagerContainerFragment"
+            app:destination="@id/messageViewPagerContainerFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/messageViewPagerContainerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/trashFragment"
+        android:name="com.trimble.ttm.formlibrary.ui.fragments.TrashFragment"
+        android:label="fragment_trash"
+        tools:layout="@layout/fragment_trash" >
+        <action
+            android:id="@+id/action_trashFragment_to_messageDetailFragment"
+            app:destination="@id/messageDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/draftFragment"
+        android:name="com.trimble.ttm.formlibrary.ui.fragments.DraftFragment"
+        android:label="fragment_draft"
+        tools:layout="@layout/fragment_draft" />
+    <fragment
+        android:id="@+id/sentFragment"
+        android:name="com.trimble.ttm.formlibrary.ui.fragments.SentFragment"
+        android:label="fragment_sent"
+        tools:layout="@layout/fragment_sent" />
+</navigation>

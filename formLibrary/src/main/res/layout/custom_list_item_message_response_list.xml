@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.trimble.ttm.formlibrary.utils.Utils"/>
+
+        <variable
+            name="messageFormReponse"
+            type="com.trimble.ttm.formlibrary.model.MessageFormResponse" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:id="@+id/constraint_layout_item_holder_message_list"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:paddingBottom="@dimen/padding_size_15">
+
+        <CheckBox
+            android:id="@+id/cbox_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="@dimen/margin_size_15"
+            android:buttonTint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_sender_name"
+            setCustomTextStyle="@{true}"
+            android:layout_width="@dimen/sender_name_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ellipsize="end"
+            android:maxEms="6"
+            android:singleLine="true"
+            android:text="@{messageFormReponse.recipientUserNames}"
+            android:textSize="@dimen/smallTextSize"
+            app:layout_constraintBottom_toBottomOf="@+id/cbox_message"
+            app:layout_constraintStart_toEndOf="@+id/cbox_message"
+            app:layout_constraintTop_toTopOf="@+id/cbox_message"
+            tools:text="user@trimble.com"
+            tools:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_subject"
+            setCustomTextStyle="@{true}"
+            android:layout_width="@dimen/subject_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="marquee"
+            android:maxEms="15"
+            android:singleLine="true"
+            android:text="@{messageFormReponse.formName}"
+            android:textSize="@dimen/smallTextSize"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_sender_name"
+            app:layout_constraintStart_toEndOf="@+id/tv_sender_name"
+            app:layout_constraintTop_toTopOf="@+id/tv_sender_name"
+            tools:text="Subject"
+            tools:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_summary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@{messageFormReponse.messageContentIfCFF}"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/smallestTextSize"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_subject"
+            app:layout_constraintEnd_toStartOf="@+id/tv_date"
+            app:layout_constraintStart_toEndOf="@+id/tv_subject"
+            app:layout_constraintTop_toTopOf="@+id/tv_subject"
+            app:layout_constraintVertical_bias="1.0"
+            tools:text="This is the content of the message. Awesome right?" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/TextAppearance.AppCompat.Body2"
+            setCustomTextStyle="@{true}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@{Utils.INSTANCE.getDateOrTimeStringForInbox(context, messageFormReponse.createdUnixTime, messageFormReponse.createdOn)}"
+            android:textSize="@dimen/smallTextSize"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_summary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_summary"
+            tools:text="Jan 1"
+            tools:textColor="@color/white" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

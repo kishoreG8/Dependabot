@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/colorPrimaryDark"
+    android:padding="@dimen/padding_size_20">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_options_to_proceed"
+        android:textColor="@color/textColor"
+        android:paddingBottom="@dimen/dialog_text_padding"
+        android:textSize="@dimen/image_reference_dialog_title_size"/>
+    <TextView
+        android:id="@+id/tvPreviewImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/preview_image"
+        android:gravity="center"
+        android:padding="@dimen/dialog_text_padding"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/image_reference_dialog_text_size"/>
+
+    <TextView
+        android:id="@+id/tvGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/upload_from_gallery"
+        android:padding="@dimen/dialog_text_padding"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/image_reference_dialog_text_size"/>
+
+    <TextView
+        android:id="@+id/tvCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/take_a_picture"
+        android:padding="@dimen/dialog_text_padding"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/image_reference_dialog_text_size"/>
+</LinearLayout>

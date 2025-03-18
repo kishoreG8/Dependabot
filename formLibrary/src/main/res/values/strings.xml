@@ -1,0 +1,206 @@
+<resources>
+    <string name="base_app_name">Workflow</string>
+
+    <string name="could_not_process">Sorry could not process your data</string>
+    <string name="signature_empty_customer_warning_text">Draw signature to save</string>
+    <string name="signature">Add Signature</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="clear">CLEAR</string>
+    <string name="save">SAVE</string>
+    <string name="send">SEND</string>
+    <string name="saveToDrafts">SAVE TO DRAFTS</string>
+
+    <string name="component_hint_required">%1$s*</string>
+    <string name="component_hint_optional">%1$s</string>
+
+    <string name="choose_date_time">Choose Date &amp; Time</string>
+    <string name="ok_text">OK</string>
+    <string name="chooseDate">Choose Date</string>
+    <string name="form_not_a_valid_number">Entered field can not be empty and should be a valid number</string>
+    <string name="form_number_not_in_range">Entered field is not in the expected range min-max </string>
+    <string name="preview_image">Preview Image</string>
+    <string name="chooseTime">Choose Time</string>
+
+    <string name="cannot_be_empty">Cannot be empty</string>
+    <string name="fill_required_field">Please fill the required field(s)</string>
+    <string name="alert">Alert</string>
+
+    <string name="scan_bar_code_description_place_holder">Tap here to scan %1$s</string>
+    <string name="scan_bar_code_error_length">Not a valid Code</string>
+
+    <string name="request_permission_camera_error">Camera permission is essential for scanning the code</string>
+    <string name="request_permission_camera_image_capture_error">Camera permission denied</string>
+
+    <string name="select_options_to_proceed">Select Options to Proceed</string>
+    <string name="image_cannot_be_displayed">Image cannot be displayed.</string>
+    <string name="camera_app_not_found">"Camera application is not found"</string>
+    <string name="image_not_valid">Selected File is not valid</string>
+    <string name="camera_app_not_enabled_or_aborted">"Your camera app is disabled or Capture aborted"</string>
+    <string name="floating_button">Floating Button</string>
+    <string name="search">Search</string>
+    <string name="clear_search">Clear Search</string>
+    <string name="take_a_picture">Take a Picture</string>
+    <string name="upload_from_gallery">Upload From Gallery</string>
+    <string name="erorr_saving_image">Error in capturing an image…</string>
+
+    <string name="messaging">MESSAGING</string>
+    <string name="tts_play_content_description">Reads the message</string>
+    <string name="reply_content_description">Opens reply form / message</string>
+    <string name="delete_content_description">Deletes the form / message</string>
+    <string name="message_detail_from">From</string>
+    <string name="message_detail_date">Date </string>
+    <string name="deletes_the_messages_content_description">Deletes the messages</string>
+
+    <string name="internet_disabled_title">No Internet Connection %1$s</string>
+    <string name="no_internet_in_message">Failed to retrieve messages.</string>
+    <string name="delete_message_title">Deletion Alert</string>
+    <string name="inbox_individual_delete_message_content">Are you sure you want to delete the selected %d message(s)?</string>
+    <string name="inbox_delete_all_message_content">Are you sure you want to delete all the message(s)</string>
+    <string name="draft_sent_trash_individual_delete_message_content">Are you sure you want to delete the selected %d message(s) permanently?</string>
+    <string name="draft_sent_trash_delete_all_message_content">Are you sure you want to delete all the message(s) permanently?</string>
+    <string name="delete_message_content_message_detail">Are you sure you want to delete this message?</string>
+    <string name="delete_message_permanent_content_message_detail">Are you sure you want to delete this message permanently?</string>
+    <string name="delete_success_message">Deleted successfully</string>
+    <string name="delete_failure_message">Delete Failed</string>
+    <string name="loading_text">Loading…</string>
+    <string name="drafting_text">Drafting…</string>
+    <string name="sending_text">Sending…</string>
+    <string name="deleting_text">Deleting…</string>
+    <string name="draft_saved">Draft Saved</string>
+    <string name="err_loading_messages">Failed to load Messages</string>
+    <string name="no_messages_available">No Messages Available</string>
+    <string name="unable_to_fetch_messages">Failed to fetch messages</string>
+
+    <string name="form_not_displayed">Form could not be displayed</string>
+    <string name="freeform_editable_input_field_hint_text">Enter your Message</string>
+    <string name="freeform_non_editable_input_field_hint_text">Message</string>
+    <string name="to">To</string>
+    <string name="tap_to_select_recipients">Tap to select recipients</string>
+
+    <string name="message_sent">Message Sent Successfully</string>
+    <string name="message_drafted">Message Drafted Successfully</string>
+    <string name="form_drafted">Form Drafted Successfully</string>
+    <string name="freeform_message">New Message</string>
+    <string name="new_msg_notification_title">New Message Received</string>
+    <string name="new_message_hpn_content_text">New Message</string>
+    <string name="new_message">%1$s new messages</string>
+    <string name="new_message_single">%1$s new message</string>
+    <string name="email_with_form">New Form</string>
+    <string name="msg_content_send_new_message">Send New Message</string>
+    <string name="tts_language_data_missing">Language data missing</string>
+    <string name="tts_init_failed">Init failed</string>
+    <string name="select_all">Select All</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="arrow">Arrow</string>
+    <string name="type_to_search">Type to search…</string>
+    <string name="err_loading_driver_originated_form_list">Failed to load Driver Originated Forms</string>
+    <string name="no_forms_available">No Forms Available</string>
+    <string name="unable_to_fetch_forms">Failed to fetch forms</string>
+    <string name="unable_to_fetch_hot_keys">Failed to fetch hot keys</string>
+    <string name="vehicle_id_or_cid_not_found">Vehicle id or Customer id not found</string>
+    <string name="create_from">Create Form</string>
+    <string name="no_internet_in_form_library_list">No Internet Connection. Failed to retrieve forms.</string>
+    <string name="predefined_recipients">Predefined Recipients</string>
+    <string name="form_must_have_one_recipient_at_least">Form must have at least one recipient</string>
+    <string name="dtf_form_exit_message">Are you sure want to leave this page? Your entered values in the form will be lost.</string>
+    <string name="dtf_form_exit_message_draft">Leaving this screen will delete any data you have input. Are you sure you wish to leave?</string>
+    <string name="draft_form_exit_message">The form will be saved to drafts.</string>
+    <string name="draft_message">Would you like to save your entered data to Draft?</string>
+    <string name="unable_to_fetch_contacts">Unable to fetch contacts.</string>
+    <string name="no_contacts_available">No Contacts Available</string>
+    <string name="done">DONE</string>
+    <string name="select_contacts">Select Contacts</string>
+    <string name="select_a_recipient">Please select a recipient</string>
+    <string name="no_internet_in_contacts">No Internet Connection. Failed to retrieve contacts.</string>
+    <string name="dtw_text">Detention Time for %s has expired.</string>
+
+    <string name="menu_messaging">Messaging</string>
+    <string name="menu_inbox">Inbox</string>
+    <string name="menu_trash">Trash</string>
+    <string name="menu_draft">Draft</string>
+    <string name="menu_form_library">Forms</string>
+    <string name="menu_hot_keys">HotKeys</string>
+    <string name="menu_inspections">Inspections</string>
+    <string name="menu_end_trip">End Trip</string>
+    <string name="menu_stop_list">Stop List</string>
+    <string name="menu_trip_list">Trip List</string>
+    <string name="menu_sent">Sent</string>
+    <string name="offline_mode">Offline Mode</string>
+    <string name="favourite_forms">Favourites</string>
+
+    <string name="group_menu_indicator_content_desc">Indicates menu expanded and collapsed state</string>
+    <string name="group_menu_icon_content_desc">Group menu icon</string>
+    <!--EDVIR Inspection-->
+    <string name="label_pre_trip_insp">Pre Trip</string>
+    <string name="label_post_trip_insp">Post Trip</string>
+    <string name="label_inter_trip_insp">Inter Trip</string>
+    <string name="label_dot_trip_insp">DOT</string>
+    <string name="pre_trip_inspection">Pre Trip Inspection</string>
+    <string name="post_trip_inspection">Post Trip Inspection</string>
+    <string name="inter_trip_inspection">Inter Trip Inspection</string>
+    <string name="dot_inspection">DOT Inspection</string>
+    <string name="title_inspections">Inspections</string>
+    <string name="err_current_driver_not_available">Current driver not available</string>
+    <string name="err_insp_could_not_be_initiated">Could not initiate inspection.%1$s</string>
+    <string name="err_insp_customer_id_empty">Customer data not available.</string>
+    <string name="err_insp_invalid_form">Invalid form.</string>
+    <string name="err_insp_driver_vehicle_details_insp_type_empty">Driver or vehicle details is not available.</string>
+    <string name="inspection_success">Inspection success.</string>
+    <string name="inspection_failed">Inspection failed.%1$s</string>
+    <string name="driver_not_signed_in_efs">Driver not signed in to eFleetSuite.</string>
+    <string name="annotation_failed_invalid_annotation_text">Annotation text format is invalid.</string>
+    <string name="annotation_failed_log_event_changed">Log event changed.</string>
+    <string name="annotation_failed_unexpected_error">Unexpected error.</string>
+    <string name="no_inspection_history">No inspections in the past 14 days</string>
+    <string name="manual_inspection_complete_dialog_prompt_text">You have an inspection in progress, would you still like to leave?</string>
+    <string name="mandatory_inspection_complete_dialog_prompt_text">You must first complete the inspection to exit</string>
+    <string name="err_duty_status_not_available">Driver duty status not available</string>
+    <string name="err_loading_inspections_list">Failed to load Inspections history</string>
+    <string name="no_internet_in_inspections_history">No Internet Connection. Failed to retrieve inspections history.</string>
+
+    <!--Device and firebase auth-->
+    <string name="no_internet_authentication_failed">Authentication Failed. No Internet Connection.</string>
+    <string name="device_authentication_failure">Failed to authenticate device.</string>
+    <string name="firestore_authentication_failure">Failed to authenticate server.</string>
+    <string name="authenticate_progress_text">Authenticating…</string>
+    <string name="form_sent_successfully">Form Sent Successfully</string>
+    <string name="form_saved_to_drafts">Form was saved to drafts.</string>
+
+    <!--Keypad strings -->
+    <string name="keypad_next">Next</string>
+    <string name="keypad_done">Done</string>
+    <string name="delete_all_disabled_msg">Deleting all messages is not possible when the device is offline.</string>
+    <string name="unselect_all_messages_on_new_message">New message received. All messages will now be unselected.</string>
+
+    <!--TTS Widget-->
+    <string name="ttsWidgetNoNewMessages">No new messages</string>
+    <string name="ttsWidgetPreviousDescription">This is the previous button, it allows you to go back to the previous message.</string>
+    <string name="ttsWidgetPreviousDeactivatedDescription">You don\'t have previous messages to navigate.</string>
+    <string name="ttsWidgetPlayDescription">This is the play button, it allows you to play the message.</string>
+    <string name="ttsWidgetPlayDeactivatedDescription">You don\'t have any new message.</string>
+    <string name="ttsWidgetNextDescription">This is the next button, it allows you to go to the next message.</string>
+    <string name="ttsWidgetNextDeactivatedDescription">You don\'t have more messages to navigate.</string>
+    <string name="ttsWidgetReplayDescription">This is the replay button, it allows you to replay the message.</string>
+    <string name="ttsWidgetStopDescription">This is the stop button, it allows you to stop the message.</string>
+    <string name="ttsWidgetPauseDescription">This is the pause button, it allows you to pause the message.</string>
+    <string name="ttsTryAgainError">Try to play again.</string>
+    <string name="tts_widget_no_new_messages">No new messages</string>
+    <string name="tts_widget_left_messages">%d of %d messages</string>
+    <string name="move_to_trash">MOVE TO TRASH</string>
+    <string name="delete">DELETE</string>
+
+    <string name="intent_received_data_error">RECEIVED DATA INTENT ERROR ---> %s %s is %s when is got from an intent. action: %s</string>
+    <string name="intent_send_error">SENT INTENT ERROR ---> %s</string>
+
+    <string name="detention_warning_title">New Alert Received</string>
+
+
+    <string name="leak_canary_test_class_name">assertk.Assert</string>
+    <string name="custom_workflow_service_channel_name">CustomWorkFlowEventForegroundService</string>
+    <string name="app_name">Workflow</string>
+    <string name="notification_content_text">Processing Custom WorkFlow Events</string>
+    <string name="no_browser_found">"No browser found"</string>
+    <string name="image_processing_error">Image processing error</string>
+</resources>

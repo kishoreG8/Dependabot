@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvHamburgerMenu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/hamburger_menu_child_item_start_padding"
+    android:paddingTop="@dimen/hamburger_menu_child_item_top_padding"
+    android:paddingEnd="@dimen/hamburger_menu_child_item_end_padding"
+    android:paddingBottom="@dimen/hamburger_menu_child_item_bottom_padding"
+    android:textColor="@android:color/white"
+    android:textSize="@dimen/hamburger_menu_text_size" />

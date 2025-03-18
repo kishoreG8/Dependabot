@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dotTopMargin">20dp</dimen>
+    <dimen name="tabTextSize">20sp</dimen>
+    <dimen name="stopTitleWidth">300dp</dimen>
+    <dimen name="tripPreviewStartMargin">230dp</dimen>
+    <dimen name="dispatchListRowPadding">24dp</dimen>
+    <dimen name="formListRowPadding">24dp</dimen>
+    <dimen name="stopListRowPadding">24dp</dimen>
+    <dimen name="dispatchIdTextSize">24sp</dimen>
+    <dimen name="dispatchNameTextSize">24sp</dimen>
+    <dimen name="dispatchDescriptionTextSize">20sp</dimen>
+    <dimen name="timeLineStopDetailETATextSize">18sp</dimen>
+
+    <dimen name="previousSize">60dp</dimen>
+    <dimen name="nextSize">60dp</dimen>
+</resources>

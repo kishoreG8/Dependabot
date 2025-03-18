@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+    <TextView
+            android:id="@+id/tv_scanned_barcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:maxLines="2"
+            android:scrollHorizontally="true"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/bar_code_content_view" />
+
+    <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="@dimen/cancel_action_button_size"
+            android:layout_height="@dimen/cancel_action_button_size"
+            android:layout_gravity="end"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="@dimen/margin_size_15"
+            android:layout_toStartOf="@+id/ivCancel"
+            android:background="@drawable/ic_barcode"
+            android:contentDescription="@string/preview_image" />
+
+    <ImageView
+            android:id="@+id/ivCancel"
+            android:layout_width="@dimen/cancel_action_button_size"
+            android:layout_height="@dimen/cancel_action_button_size"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/ic_cancel_white"
+            android:contentDescription="@string/preview_image" />
+
+</RelativeLayout>

@@ -1,0 +1,2864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="5" by="lint Dolphin | 2021.3.1">
+
+    <issue
+        id="AnnotateVersionCheck"
+        message="This method should be annotated with `@ChecksSdkIntAtLeast(api=Build.VERSION_CODES.TIRAMISU)`">
+        <location
+            file="src/main/java/com/trimble/ttm/commons/utils/ext/IntentExt.kt"
+            line="18"/>
+    </issue>
+
+    <issue
+        id="ExifInterface"
+        message="Avoid using `android.media.ExifInterface`; use `androidx.media.ExifInterface` instead">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/ui/activities/ImportImageUriActivity.kt"
+            line="11"/>
+    </issue>
+
+    <issue
+        id="InconsistentLayout"
+        message="The id &quot;cardViewFirst&quot; in layout &quot;activity_stop_detail&quot; is missing from the following layout configurations: layout (present in layout-land)">
+        <location
+            file="src/main/res/layout-land/activity_stop_detail.xml"
+            line="56"/>
+    </issue>
+
+    <issue
+        id="InconsistentLayout"
+        message="The id &quot;cardView1&quot; in layout &quot;activity_stop_detail&quot; is missing from the following layout configurations: layout-land (present in layout)">
+        <location
+            file="src/main/res/layout/activity_stop_detail.xml"
+            line="66"/>
+    </issue>
+
+    <issue
+        id="InconsistentLayout"
+        message="The id &quot;cardView2&quot; in layout &quot;activity_stop_detail&quot; is missing from the following layout configurations: layout-land (present in layout)">
+        <location
+            file="src/main/res/layout/activity_stop_detail.xml"
+            line="183"/>
+    </issue>
+
+    <issue
+        id="InconsistentLayout"
+        message="The id &quot;cardViewSecond&quot; in layout &quot;activity_stop_detail&quot; is missing from the following layout configurations: layout (present in layout-land)">
+        <location
+            file="src/main/res/layout-land/activity_stop_detail.xml"
+            line="354"/>
+    </issue>
+
+    <issue
+        id="KotlinNullnessAnnotation"
+        message="Do not use `@Nullable` in Kotlin; the nullability is already implied by the Kotlin type `Any?` ending with `?`">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/utils/DiffUtilForMessaging.kt"
+            line="27"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="../formLibrary/src/main/java/com/trimble/ttm/formlibrary/ui/fragments/CustomBarCodeScannerDialogFragment.kt"
+            line="281"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="../formLibrary/src/main/java/com/trimble/ttm/formlibrary/manager/FormManager.kt"
+            line="101"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="../formLibrary/src/main/java/com/trimble/ttm/formlibrary/manager/FormManager.kt"
+            line="105"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="../formLibrary/src/main/java/com/trimble/ttm/formlibrary/manager/FormManager.kt"
+            line="120"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="../formLibrary/src/main/java/com/trimble/ttm/formlibrary/manager/FormManager.kt"
+            line="124"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="../formLibrary/src/main/java/com/trimble/ttm/formlibrary/manager/FormManager.kt"
+            line="130"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="../formLibrary/src/main/java/com/trimble/ttm/formlibrary/manager/FormManager.kt"
+            line="134"/>
+    </issue>
+
+    <issue
+        id="QueryPermissionsNeeded"
+        message="As of Android 11, this method no longer returns information about all apps; \&#xA;see https://g.co/dev/packagevisibility for details">
+        <location
+            file="src/main/java/com/trimble/ttm/routemanifest/utils/ext/AndroidComponentsExt.kt"
+            line="57"/>
+    </issue>
+
+    <issue
+        id="QueryPermissionsNeeded"
+        message="As of Android 11, this method no longer returns information about all apps; \&#xA;see https://g.co/dev/packagevisibility for details">
+        <location
+            file="src/main/java/com/trimble/ttm/routemanifest/utils/ext/AndroidComponentsExt.kt"
+            line="57"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.activity:activity-compose than 1.6.1 is available: 1.7.2">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.activity:activity-ktx than 1.6.1 is available: 1.7.2">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.activity:activity-ktx than 1.6.1 is available: 1.7.2">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.appcompat:appcompat than 1.5.1 is available: 1.6.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.appcompat:appcompat than 1.5.1 is available: 1.6.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.appcompat:appcompat than 1.5.1 is available: 1.6.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.arch.core:core-testing than 2.1.0 is available: 2.2.0">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.arch.core:core-testing than 2.1.0 is available: 2.2.0">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.benchmark:benchmark-macro-junit4 than 1.1.0 is available: 1.1.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.foundation:foundation than 1.3.1 is available: 1.4.3">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.foundation:foundation-layout than 1.3.1 is available: 1.4.3">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.material:material than 1.3.1 is available: 1.4.3">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.material:material-icons-core than 1.3.1 is available: 1.4.3">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.runtime:runtime-livedata than 1.3.1 is available: 1.4.3">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.ui:ui than 1.3.1 is available: 1.4.3">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.ui:ui-test-junit4 than 1.3.1 is available: 1.4.3">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.ui:ui-tooling than 1.3.1 is available: 1.4.3">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.ui:ui-tooling-preview than 1.3.1 is available: 1.4.3">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.core:core-ktx than 1.9.0 is available: 1.10.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.core:core-ktx than 1.9.0 is available: 1.10.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.exifinterface:exifinterface than 1.3.5 is available: 1.3.6">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.fragment:fragment-ktx than 1.5.4 is available: 1.6.0">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.fragment:fragment-ktx than 1.5.4 is available: 1.6.0">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.fragment:fragment-ktx than 1.5.4 is available: 1.6.0">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-reactivestreams-ktx than 2.5.1 is available: 2.6.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-reactivestreams-ktx than 2.5.1 is available: 2.6.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-compose than 2.5.1 is available: 2.6.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.5.1 is available: 2.6.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.5.1 is available: 2.6.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation:navigation-fragment-ktx than 2.5.3 is available: 2.6.0">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation:navigation-fragment-ktx than 2.5.3 is available: 2.6.0">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation:navigation-ui-ktx than 2.5.3 is available: 2.6.0">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation:navigation-ui-ktx than 2.5.3 is available: 2.6.0">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.profileinstaller:profileinstaller than 1.3.0-alpha02 is available: 1.3.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.room:room-ktx than 2.4.3 is available: 2.5.2">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.room:room-runtime than 2.4.3 is available: 2.5.2">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-contrib than 3.5.0 is available: 3.5.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.4.0 is available: 3.5.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.5.0 is available: 3.5.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.5.0 is available: 3.5.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.5.0 is available: 3.5.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.ext:junit than 1.1.3 is available: 1.1.5">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.ext:junit than 1.1.4 is available: 1.1.5">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.ext:junit than 1.1.4 is available: 1.1.5">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.ext:junit than 1.1.4 is available: 1.1.5">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:runner than 1.5.1 is available: 1.5.2">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.work:work-runtime-ktx than 2.7.1 is available: 2.8.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.work:work-runtime-ktx than 2.7.1 is available: 2.8.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.work:work-testing than 2.7.1 is available: 2.8.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.work:work-testing than 2.7.1 is available: 2.8.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.android.material:material than 1.2.0-alpha01 is available: 1.10.0-alpha04">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.android.material:material than 1.2.0-alpha01 is available: 1.10.0-alpha04">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.android.material:material than 1.2.0-alpha01 is available: 1.10.0-alpha04">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.android.play:app-update than 2.0.1 is available: 2.1.0">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.android.play:app-update-ktx than 2.0.1 is available: 2.1.0">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.firebase:firebase-appcheck-debug than 16.1.0 is available: 17.0.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.firebase:firebase-appcheck-debug than 16.1.0 is available: 17.0.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.firebase:firebase-appcheck-playintegrity than 16.1.0 is available: 17.0.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.firebase:firebase-appcheck-playintegrity than 16.1.0 is available: 17.0.1">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.firebase:firebase-crashlytics-gradle than 2.9.2 is available: 2.9.6">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.gms:google-services than 4.3.14 is available: 4.3.15">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ActivityStopDetailBindingImpl.java"
+            line="783"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="ViewBindingAdapter.setBackground can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ActivityStopDetailBindingImpl.java"
+            line="793"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ActivityStopDetailBindingImpl.java"
+            line="805"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ActivityStopDetailBindingImpl.java"
+            line="806"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ActivityStopDetailBindingImpl.java"
+            line="807"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ActivityStopDetailBindingImpl.java"
+            line="810"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ActivityStopDetailBindingImpl.java"
+            line="819"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ActivityStopDetailBindingImpl.java"
+            line="846"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ActivityStopDetailBindingImpl.java"
+            line="851"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ActivityStopDetailBindingImpl.java"
+            line="856"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ActivityStopDetailBindingLandImpl.java"
+            line="783"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="ViewBindingAdapter.setBackground can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ActivityStopDetailBindingLandImpl.java"
+            line="793"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ActivityStopDetailBindingLandImpl.java"
+            line="805"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ActivityStopDetailBindingLandImpl.java"
+            line="806"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ActivityStopDetailBindingLandImpl.java"
+            line="807"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ActivityStopDetailBindingLandImpl.java"
+            line="810"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ActivityStopDetailBindingLandImpl.java"
+            line="819"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ActivityStopDetailBindingLandImpl.java"
+            line="846"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ActivityStopDetailBindingLandImpl.java"
+            line="851"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ActivityStopDetailBindingLandImpl.java"
+            line="856"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="MergedDataBinderMapper can only be accessed from within the same library (androidx.databinding:databinding-runtime)">
+        <location
+            file="build/generated/source/kapt/prodDebug/androidx/databinding/DataBinderMapperImpl.java"
+            line="3"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="MergedDataBinderMapper.addMapper can only be called from within the same library (androidx.databinding:databinding-runtime)">
+        <location
+            file="build/generated/source/kapt/prodDebug/androidx/databinding/DataBinderMapperImpl.java"
+            line="5"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="DataBinderMapper can only be accessed from within the same library (androidx.databinding:databinding-runtime)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/DataBinderMapperImpl.java"
+            line="25"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="DataBinderMapper.getLayoutId can only be called from within the same library (androidx.databinding:databinding-runtime)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/DataBinderMapperImpl.java"
+            line="105"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="DataBinderMapper.convertBrIdToString can only be called from within the same library (androidx.databinding:databinding-runtime)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/DataBinderMapperImpl.java"
+            line="114"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="DataBinderMapper.collectDependencies can only be called from within the same library (androidx.databinding:databinding-runtime)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/DataBinderMapperImpl.java"
+            line="120"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/DispatchItemRowBindingImpl.java"
+            line="178"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/DispatchItemRowBindingImpl.java"
+            line="179"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/FragmentTimelineStopDetailBindingImpl.java"
+            line="304"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/FragmentTimelineStopDetailBindingImpl.java"
+            line="309"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ItemRowBindingImpl.java"
+            line="227"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/prodDebug/com/trimble/ttm/routemanifest/databinding/ItemRowBindingLandImpl.java"
+            line="227"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;CyoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA!&quot; instead of &quot;CyoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA!&quot; instead of &quot;DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;MAwGA!&quot; instead of &quot;MAwGA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA!&quot; instead of &quot;NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;hZeTfHwqNvacKhp!&quot; instead of &quot;hZeTfHwqNvacKhp1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;mtKoOD!&quot; instead of &quot;mtKoOD1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;pYTEWMBQGA!&quot; instead of &quot;pYTEWMBQGA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;pYTEWMBQGA!&quot; instead of &quot;pYTEWMBQGA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;pYTEWMBQGA!&quot; instead of &quot;pYTEWMBQGA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;wNfdIjIz!&quot; instead of &quot;wNfdIjIz1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;xT!&quot; instead of &quot;xT1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;MQswCQYDVQQGEwJVUzETMBEGA!&quot; instead of &quot;MQswCQYDVQQGEwJVUzETMBEGA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;XFI!&quot; instead of &quot;XFI1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;gVmlldzEUMBIGA!&quot; instead of &quot;gVmlldzEUMBIGA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;iZBqpknHf!&quot; instead of &quot;iZBqpknHf1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;idkyugwfYwXFU!&quot; instead of &quot;idkyugwfYwXFU1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;jMIhF!&quot; instead of &quot;jMIhF1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;jMIhF!&quot; instead of &quot;jMIhF1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;pYTEWMBQGA!&quot; instead of &quot;pYTEWMBQGA1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;sypEwPpt!&quot; instead of &quot;sypEwPpt1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;ybmlhMRYwFAYDVQQHEw!&quot; instead of &quot;ybmlhMRYwFAYDVQQHEw1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;ybmlhMRYwFAYDVQQHEw!&quot; instead of &quot;ybmlhMRYwFAYDVQQHEw1&quot;?">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;message&quot;): This should probably be a plural rather than a string">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="62"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;message&quot;): This should probably be a plural rather than a string">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="64"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;messages&quot;): This should probably be a plural rather than a string">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="187"/>
+    </issue>
+
+    <issue
+        id="DataExtractionRules"
+        message="The attribute `android:allowBackup` is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute `android:dataExtractionRules` specifying an `@xml` resource which configures cloud backups and device transfers on Android 12 and higher.">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="25"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/ui/activities/ContactListActivity.kt"
+            line="55"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/ui/fragments/DraftFragment.kt"
+            line="140"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/ui/fragments/DraftFragment.kt"
+            line="159"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/ui/fragments/DraftFragment.kt"
+            line="163"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/ui/fragments/DraftFragment.kt"
+            line="240"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/ui/activities/EDVIRInspectionsActivity.kt"
+            line="78"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/ui/activities/FormLibraryActivity.kt"
+            line="185"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/adapter/FormLibraryListAdapter.kt"
+            line="70"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/ui/fragments/InboxFragment.kt"
+            line="208"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/ui/fragments/InboxFragment.kt"
+            line="296"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/ui/fragments/InboxFragment.kt"
+            line="345"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/ui/fragments/InboxFragment.kt"
+            line="349"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/adapter/InboxListAdapter.kt"
+            line="102"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/routemanifest/ui/fragments/ListFragment.kt"
+            line="151"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/adapter/MessageResponseListAdapter.kt"
+            line="104"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/ui/fragments/SentFragment.kt"
+            line="95"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/ui/fragments/SentFragment.kt"
+            line="203"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/ui/fragments/SentFragment.kt"
+            line="207"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/ui/fragments/SentFragment.kt"
+            line="270"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/formlibrary/ui/fragments/TrashFragment.kt"
+            line="62"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/trimble/ttm/routemanifest/ui/fragments/TripListFragment.kt"
+            line="106"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 29">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="213"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 33">
+        <location
+            file="src/main/java/com/trimble/ttm/routemanifest/ui/activities/ComposeFormActivity.kt"
+            line="527"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 33">
+        <location
+            file="src/main/java/com/trimble/ttm/routemanifest/ui/activities/FormActivity.kt"
+            line="596"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 26">
+        <location
+            file="src/main/java/com/trimble/ttm/commons/utils/NotificationUtils.kt"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 25">
+        <location
+            file="src/main/java/com/trimble/ttm/routemanifest/utils/Utils.kt"
+            line="179"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="This folder configuration (`v21`) is unnecessary; `minSdkVersion` is 25. Merge all the resources in this folder into `drawable`.">
+        <location
+            file="src/main/res/drawable-v21"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="This folder configuration (`v21`) is unnecessary; `minSdkVersion` is 25. Merge all the resources in this folder into `values`.">
+        <location
+            file="src/main/res/values-v21"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1329 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_app_icon_foreground.xml"
+            line="11"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/colorPrimary` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="../formLibrary/src/main/res/layout/activity_contact_list.xml"
+            line="7"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/colorPrimaryDark` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="src/main/res/layout/activity_dispatch_list.xml"
+            line="10"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/colorPrimary` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="../formLibrary/src/main/res/layout/activity_edvir_inspections.xml"
+            line="6"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/colorPrimary` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="../formLibrary/src/main/res/layout/activity_form_library.xml"
+            line="7"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/colorPrimaryDark` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="../formLibrary/src/main/res/layout/activity_image_preview.xml"
+            line="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/transparent` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="src/main/res/layout/activity_notification_redirection.xml"
+            line="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/colorPrimary` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="src/main/res/layout/activity_transition_screen.xml"
+            line="7"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/widgetBackgroundPrimary` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="src/main/res/layout/driver_tts_widget.xml"
+            line="7"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/widgetBackgroundPrimary` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="../formLibrary/src/main/res/layout/driver_tts_widget.xml"
+            line="7"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/hamburger_menu_background_color` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="../formLibrary/src/main/res/layout/hamburger_menu_layout.xml"
+            line="7"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/colorPrimaryDark` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="../formLibrary/src/main/res/layout/item_barcode.xml"
+            line="6"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/colorPrimaryDark` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="../formLibrary/src/main/res/layout/layout_dialog_form_bar_code_scanner.xml"
+            line="6"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/colorPrimaryDark` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="../formLibrary/src/main/res/layout/layout_dialog_form_signature.xml"
+            line="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/colorPrimaryDark` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="../formLibrary/src/main/res/layout/layout_image_reference_dialog.xml"
+            line="6"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/colorAccent` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="src/main/res/layout-land/layout_trip_start_bottom_sheet.xml"
+            line="6"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/colorAccent` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="src/main/res/layout/layout_trip_start_bottom_sheet.xml"
+            line="8"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.app_widget_background` appears to be unused">
+        <location
+            file="src/main/res/drawable-v21/app_widget_background.xml"
+            line="5"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.app_widget_inner_view_background` appears to be unused">
+        <location
+            file="src/main/res/drawable-v21/app_widget_inner_view_background.xml"
+            line="5"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.hintColor` appears to be unused">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.lightGrey` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/colors.xml"
+            line="24"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.light_blue_50` appears to be unused">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="33"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.light_blue_200` appears to be unused">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="34"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.light_blue_600` appears to be unused">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="35"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.light_blue_900` appears to be unused">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="36"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.widgetProgressBarBackground` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/colors.xml"
+            line="46"/>
+        <location
+            file="src/main/res/values/colors.xml"
+            line="32"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.small_shape_dp` appears to be unused">
+        <location
+            file="../commons/src/main/res/values/dimens.xml"
+            line="8"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.medium_shape_dp` appears to be unused">
+        <location
+            file="../commons/src/main/res/values/dimens.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.large_shape_dp` appears to be unused">
+        <location
+            file="../commons/src/main/res/values/dimens.xml"
+            line="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.font_size_26sp` appears to be unused">
+        <location
+            file="../commons/src/main/res/values/dimens.xml"
+            line="11"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.textFormTextSize` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="11"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.font_size_22sp` appears to be unused">
+        <location
+            file="../commons/src/main/res/values/dimens.xml"
+            line="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.font_size_19sp` appears to be unused">
+        <location
+            file="../commons/src/main/res/values/dimens.xml"
+            line="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.font_size_18sp` appears to be unused">
+        <location
+            file="../commons/src/main/res/values/dimens.xml"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.font_size_16sp` appears to be unused">
+        <location
+            file="../commons/src/main/res/values/dimens.xml"
+            line="15"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.largestTextSize` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="15"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="14"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.font_size_14sp` appears to be unused">
+        <location
+            file="../commons/src/main/res/values/dimens.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.mediumTextSize` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="17"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="16"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.recyclerCardHeight` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="21"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="20"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="20"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.distanceTextTopMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="25"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="24"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="24"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.distanceTextBottomMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="26"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="25"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="25"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.totalMilesStartMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="27"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="26"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="26"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.totalStopsStartMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="28"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="27"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="27"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.stopActionIconStartMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="33"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="32"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="32"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.stopActionIconTopMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="34"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="33"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="33"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.stopActionIconBottomMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="35"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="34"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="34"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.stopTitleWidth` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="37"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="36"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="36"/>
+        <location
+            file="src/main/res/values-large-land/dimens.xml"
+            line="3"/>
+        <location
+            file="src/main/res/values-xlarge/dimens.xml"
+            line="5"/>
+        <location
+            file="src/main/res/values-xlarge-land/dimens.xml"
+            line="3"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.stopTitleTopMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="38"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="37"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="37"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.stopTitleBottomMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="39"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="38"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="38"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.stopTitleStartMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="40"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="39"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="39"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.stopAddress1TopMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="42"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="41"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="41"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.stopAddress1EndMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="43"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="42"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="42"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.stopAddress2EndMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="45"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="44"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="44"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.dotTopMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="47"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="50"/>
+        <location
+            file="src/main/res/values-xlarge/dimens.xml"
+            line="3"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.completedTimeTopMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="48"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.arrowIconTopMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="49"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="46"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="46"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.arrowIconEndMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="50"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="47"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="47"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.arrowIconBottomMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="51"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="48"/>
+        <location
+            file="src/main/res/values-large/dimens.xml"
+            line="48"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.timelineStopTitleWidth` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="63"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.boxCornerRadius` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="70"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.stopPopupIconWidth` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="72"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.playerWidgetPlayButtonHeight` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/dimens.xml"
+            line="84"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.playerWidgetNextButtonHeight` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/dimens.xml"
+            line="86"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.playerWidgetIconButtonHeight` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/dimens.xml"
+            line="90"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.playerWidgetIconButtonWidth` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/dimens.xml"
+            line="91"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.playerWidgetProgressBarHeight` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/dimens.xml"
+            line="92"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.playerWidgetProgressBarWidth` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/dimens.xml"
+            line="93"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.playerWidgetMessageTimeSize` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/dimens.xml"
+            line="96"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.widget_padding` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="99"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.appIconTopMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="100"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="65"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.appWidgetTitleStartMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="104"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.appWidgetTitleTopMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="105"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.appWidgetTotalMilesStartMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="107"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="68"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.appWidgetTotalMilesTopMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="108"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.appWidgetBottomTitleMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="110"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="71"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.appWidgetTotalStopsTopMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="114"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.checkmarkBreakMargin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="115"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.widget_margin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="135"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.example_appwidget_preview` appears to be unused">
+        <location
+            file="src/main/res/drawable-nodpi/example_appwidget_preview.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.grey_border_background` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/drawable/grey_border_background.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_access_time_24px` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/drawable/ic_access_time_24px.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_barcode_dark_grey` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_barcode_dark_grey.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_baseline_assignment_32` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_baseline_assignment_32.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_date_range_white_24px` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/drawable/ic_date_range_white_24px.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_find_in_page_black_32dp` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_find_in_page_black_32dp.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.ic_forms_shortcut_icon_background` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/ic_forms_shortcut_icon_background.xml"
+            line="3"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.mipmap.ic_forms_shortcut_round` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/mipmap-anydpi-v26/ic_forms_shortcut_round.xml"
+            line="2"/>
+        <location
+            file="../formLibrary/src/main/res/mipmap-hdpi/ic_forms_shortcut_round.png"/>
+        <location
+            file="../formLibrary/src/main/res/mipmap-mdpi/ic_forms_shortcut_round.png"/>
+        <location
+            file="../formLibrary/src/main/res/mipmap-xhdpi/ic_forms_shortcut_round.png"/>
+        <location
+            file="../formLibrary/src/main/res/mipmap-xxhdpi/ic_forms_shortcut_round.png"/>
+        <location
+            file="../formLibrary/src/main/res/mipmap-xxxhdpi/ic_forms_shortcut_round.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.ic_inbox_shortcut_icon_background` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/ic_inbox_shortcut_icon_background.xml"
+            line="3"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.mipmap.ic_inbox_shortcut_round` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/mipmap-anydpi-v26/ic_inbox_shortcut_round.xml"
+            line="2"/>
+        <location
+            file="../formLibrary/src/main/res/mipmap-hdpi/ic_inbox_shortcut_round.png"/>
+        <location
+            file="../formLibrary/src/main/res/mipmap-mdpi/ic_inbox_shortcut_round.png"/>
+        <location
+            file="../formLibrary/src/main/res/mipmap-xhdpi/ic_inbox_shortcut_round.png"/>
+        <location
+            file="../formLibrary/src/main/res/mipmap-xxhdpi/ic_inbox_shortcut_round.png"/>
+        <location
+            file="../formLibrary/src/main/res/mipmap-xxxhdpi/ic_inbox_shortcut_round.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_timeline_stop_highlight_find_32dp` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_timeline_stop_highlight_find_32dp.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.navigation.navigation` appears to be unused">
+        <location
+            file="src/main/res/navigation/navigation.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.primary_color_rect_bg` appears to be unused">
+        <location
+            file="src/main/res/drawable/primary_color_rect_bg.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.menu_today_route` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="4"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.map` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="8"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.choose_any_option` appears to be unused">
+        <location
+            file="../commons/src/main/res/values/strings.xml"
+            line="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.what_is_your_age` appears to be unused">
+        <location
+            file="../commons/src/main/res/values/strings.xml"
+            line="11"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.selectDispatch` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.estimatedArrival` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="22"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.stopType` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="23"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.inspect` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="26"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.status` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="34"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.forms_download_notf_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="40"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.forms_download_notf_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="41"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.form_validation_error` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="48"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.arrived_time` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="55"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.stop_type` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="57"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.internet_disabled_title` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/strings.xml"
+            line="59"/>
+        <location
+            file="src/main/res/values/strings.xml"
+            line="84"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.no_internet_in_message` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/strings.xml"
+            line="60"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.odometer_fetch_failed_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="60"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.failed_fetch_location_value` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="61"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.form_error_dialog_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="63"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.uncompleted_form_for_stop` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="68"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.not_valid` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="71"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.cpik_foreground_service_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="81"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.message_drafted` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/strings.xml"
+            line="85"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.form_drafted` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/strings.xml"
+            line="86"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.internet_disabled_msg` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="86"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.image_not_found` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="87"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.arrived_on` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="90"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.new_message` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/strings.xml"
+            line="90"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.map_not_available` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="91"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.new_message_single` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/strings.xml"
+            line="91"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.trip_complete_dialog_message` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="93"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.fill_form_to_exit` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="105"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.no_internet_in_form_library_list` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/strings.xml"
+            line="106"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.stop_user_data` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="107"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.stop_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="108"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.stop_detail_user_data` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="113"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.no_internet_in_contacts` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/strings.xml"
+            line="116"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.no_internet_in_formlibrary` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="117"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.all_stops_removed_navigate_to_dispatch_list` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="131"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.unable_to_fetch_stop_actions_retry` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="135"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.detention_warning_title` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/strings.xml"
+            line="194"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.leak_canary_test_class_name` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/strings.xml"
+            line="197"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.DialogTheme` appears to be unused">
+        <location
+            file="../commons/src/main/res/values/styles.xml"
+            line="3"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.AppTheme_WhiteTextColor` appears to be unused">
+        <location
+            file="../formLibrary/src/main/res/values/styles.xml"
+            line="25"/>
+        <location
+            file="src/main/res/values/styles.xml"
+            line="35"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.AppTheme_spinnerStyle` appears to be unused">
+        <location
+            file="src/main/res/values/styles.xml"
+            line="74"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.Widget_Maineformsworkflowapp_AppWidget_Container` appears to be unused">
+        <location
+            file="src/main/res/values/styles.xml"
+            line="86"/>
+        <location
+            file="src/main/res/values-v21/styles.xml"
+            line="3"/>
+        <location
+            file="src/main/res/values-v31/styles.xml"
+            line="3"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.Widget_Maineformsworkflowapp_AppWidget_InnerView` appears to be unused">
+        <location
+            file="src/main/res/values/styles.xml"
+            line="91"/>
+        <location
+            file="src/main/res/values-v21/styles.xml"
+            line="8"/>
+        <location
+            file="src/main/res/values-v31/styles.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.AppTheme_AppWidgetContainerParent` appears to be unused">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="3"/>
+        <location
+            file="src/main/res/values-night-v31/themes.xml"
+            line="6"/>
+        <location
+            file="src/main/res/values-v31/themes.xml"
+            line="7"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.AppTheme_AppWidgetContainer` appears to be unused">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.xml.trimble_data_permissions` appears to be unused">
+        <location
+            file="src/prod/res/xml/trimble_data_permissions.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.trip_panel_did_you_arrive_icon` appears to be unused">
+        <location
+            file="src/main/res/drawable/trip_panel_did_you_arrive_icon.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.trip_panel_form_message_icon` appears to be unused">
+        <location
+            file="src/main/res/drawable/trip_panel_form_message_icon.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.trip_panel_next_stop_distance_icon` appears to be unused">
+        <location
+            file="src/main/res/drawable/trip_panel_next_stop_distance_icon.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.trip_panel_select_stop_icon` appears to be unused">
+        <location
+            file="src/main/res/drawable/trip_panel_select_stop_icon.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.appIconStartMargin` appears to be unused">
+        <location
+            file="../../../.gradle/caches/transforms-3/914cc6faae61d89e1b9821baabb23df0/transformed/jetified-maine-custom-toolbar-1.1.11/res/values/values.xml"
+            line="33"/>
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="101"/>
+        <location
+            file="src/main/res/values-land/dimens.xml"
+            line="66"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.white_ring` appears to be unused">
+        <location
+            file="src/main/res/drawable/white_ring.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/trip_panel_did_you_arrive_icon.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/trip_panel_did_you_arrive_icon.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/trip_panel_form_message_icon.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/trip_panel_form_message_icon.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/trip_panel_next_stop_distance_icon.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/trip_panel_next_stop_distance_icon.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/trip_panel_select_stop_icon.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/trip_panel_select_stop_icon.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/upload.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/upload.png"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/driver_tts_widget.xml"
+            line="127"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/driver_tts_widget.xml"
+            line="127"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Active Trip&quot;, should use `@string` resource">
+        <location
+            file="src/main/res/layout/dispatch_item_row.xml"
+            line="126"/>
+    </issue>
+
+    <issue
+        id="RelativeOverlap"
+        message="`@id/tv_scanned_barcode` can overlap `@id/imageView2` if @id/tv_scanned_barcode grows due to localized text expansion">
+        <location
+            file="src/main/res/layout/item_barcode.xml"
+            line="10"/>
+    </issue>
+
+    <issue
+        id="RelativeOverlap"
+        message="`@id/tv_tap` can overlap `ImageView-5` if @id/tv_tap grows due to localized text expansion">
+        <location
+            file="src/main/res/layout/layout_dialog_form_bar_code_scanner.xml"
+            line="49"/>
+    </issue>
+
+    <issue
+        id="IgnoreWithoutReason"
+        message="Test is ignored without giving any explanation">
+        <location
+            file="src/test/java/com/trimble/ttm/formlibrary/viewmodel/DraftingViewModelTest.kt"
+            line="150"/>
+    </issue>
+
+    <issue
+        id="IgnoreWithoutReason"
+        message="Test is ignored without giving any explanation">
+        <location
+            file="src/test/java/com/trimble/ttm/formlibrary/viewmodel/DraftingViewModelTest.kt"
+            line="164"/>
+    </issue>
+
+    <issue
+        id="IgnoreWithoutReason"
+        message="Test is ignored without giving any explanation">
+        <location
+            file="src/test/java/com/trimble/ttm/formlibrary/viewmodel/EDVIRFormViewModelTest.kt"
+            line="245"/>
+    </issue>
+
+    <issue
+        id="IgnoreWithoutReason"
+        message="Test is ignored without giving any explanation">
+        <location
+            file="src/test/java/com/trimble/ttm/formlibrary/usecases/FirebaseCurrentUserTokenFetchUsecaseTest.kt"
+            line="37"/>
+    </issue>
+
+    <issue
+        id="IgnoreWithoutReason"
+        message="Test is ignored without giving any explanation">
+        <location
+            file="src/test/java/com/trimble/ttm/formlibrary/usecases/FormLibraryUseCaseTest.kt"
+            line="275"/>
+    </issue>
+
+    <issue
+        id="IgnoreWithoutReason"
+        message="Test is ignored without giving any explanation">
+        <location
+            file="src/test/java/com/trimble/ttm/formlibrary/model/MessageTest.kt"
+            line="13"/>
+    </issue>
+
+    <issue
+        id="IgnoreWithoutReason"
+        message="Test is ignored without giving any explanation">
+        <location
+            file="src/test/java/com/trimble/ttm/formlibrary/model/MessageTest.kt"
+            line="58"/>
+    </issue>
+
+    <issue
+        id="IgnoreWithoutReason"
+        message="Test is ignored without giving any explanation">
+        <location
+            file="src/test/java/com/trimble/ttm/formlibrary/viewmodel/SentViewModelTest.kt"
+            line="185"/>
+    </issue>
+
+</issues>
