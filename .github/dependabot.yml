@@ -13,7 +13,6 @@ updates:
     directory: "/"
     target-branch: "Dependabot-Implementation"
     schedule:
-      interval: "daily"
     groups:
       gradle-dependencies:
         patterns:
