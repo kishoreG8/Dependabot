@@ -5,11 +5,3 @@ updates:
     target-branch: "Dependabot-Implementation"
     schedule:
       interval: "weekly"
-      day: "monday"
-      time: "16:30"
-    commit-message:
-      prefix: "dependabot"
-    groups:
-      gradle-dependencies:
-        patterns:
-          - "*"
