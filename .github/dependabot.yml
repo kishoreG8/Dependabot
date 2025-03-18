@@ -2,6 +2,9 @@ version: 2
 updates:
   - package-ecosystem: "gradle"
     directory: "/"
-    target-branch: "Dependabot-Implementation"
     schedule:
-      interval: "weekly"
+      interval: "daily"
+    groups:
+      gradle-dependencies:
+        patterns:
+          - "*"
