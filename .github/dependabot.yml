@@ -7,7 +7,7 @@ updates:
     allow:
       - dependency-type: "direct"
     ignore:
-      - dependency-name: "com.trimble:*"  # Ignore all Trimble-specific dependencies
+      - dependency-name: "artifactory.trimble.tools:*"  # Ignore all Trimble-specific dependencies
     groups:
       gradle-dependencies:
         patterns:
