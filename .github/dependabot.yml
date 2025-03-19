@@ -4,15 +4,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    groups:
-      gradle-dependencies:
-        patterns:
-          - "*"
-
-  - package-ecosystem: "gradle"
-    directory: "/"
-    target-branch: "Dependabot-Implementation"
-    schedule:
+    registries: []  
     groups:
       gradle-dependencies:
         patterns:
