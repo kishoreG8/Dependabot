@@ -4,8 +4,11 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    allow:
+      - dependency-type: "direct"
     ignore:
-      - dependency-name: "com.trimble:*"  # Ignore all private dependencies
+      - dependency-name: "*"
+        source-url: "https://artifactory.trimble.tools"
     groups:
       gradle-dependencies:
         patterns:
