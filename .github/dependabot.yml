@@ -4,7 +4,9 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    registries: []  
+    ignore:
+      - dependency-name: "com.trimble:*"  # Ignore all private dependencies
+      - dependency-name: "*:*"  # Ignore all dependencies from private registries
     groups:
       gradle-dependencies:
         patterns:
